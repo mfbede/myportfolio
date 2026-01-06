@@ -6,133 +6,211 @@
   <title>My Projects</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+
   <!-- Navigation bar -->
   <header class="navbar">
-    <div class="logo">My Website !</div>
+    <div class="logo">Myportfolio</div>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="map.html">Map</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="hobbies.html">Hobbies</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="timeline.html">Timeline</a></li>
+      <ul class="nav-icons">
+
+        <!-- HOME -->
+        <li>
+          <a href="index.html" class="nav-item">
+            <span class="icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-6 9 6v10a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V12H9v7a2 2 0 0 1-2 2H3z"/>
+              </svg>
+            </span>
+            <span class="text">Home</span>
+          </a>
+        </li>
+
+        <!-- MAP -->
+        <li>
+          <a href="map.html" class="nav-item">
+            <span class="icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l-6 3V6l6-3 6 3 6-3v15l-6 3-6-3z"/>
+              </svg>
+            </span>
+            <span class="text">Map</span>
+          </a>
+        </li>
+
+        <!-- SKILLS -->
+        <li>
+          <a href="skills.html" class="nav-item">
+            <span class="icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c0 .69.28 1.32.73 1.77.45.45 1.08.73 1.77.73H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+              </svg>
+            </span>
+            <span class="text">Skills</span>
+          </a>
+        </li>
+
+        <!-- HOBBIES -->
+        <li>
+          <a href="hobbies.html" class="nav-item">
+            <span class="icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 20l9-5-9-5-9 5 9 5z"/>
+                <path d="M12 12l9-5-9-5-9 5 9 5z"/>
+              </svg>
+            </span>
+            <span class="text">Hobbies</span>
+          </a>
+        </li>
+
+        <!-- PROJECTS (active) -->
+        <li>
+          <a href="projects.html" class="nav-item" style="color:#00bfff;">
+            <span class="icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 3h18v4H3z"/>
+                <path d="M3 7h18v14H3z"/>
+              </svg>
+            </span>
+            <span class="text">Projects</span>
+          </a>
+        </li>
+
+        <!-- TIMELINE -->
+        <li>
+          <a href="timeline.html" class="nav-item">
+            <span class="icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
+            </span>
+            <span class="text">Timeline</span>
+          </a>
+        </li>
+
       </ul>
     </nav>
   </header>
 
   <!-- Hero section -->
-  <section class="hero">
-    <h1>My Projects</h1>
-    <p>Some of the projects that I have worked on at work or University.</p>
+  <section class="hero cyber-hero">
+    <h1 class="cyber-title">My Projects</h1>
+    <p class="cyber-subtitle">Some of the projects that I have worked on at work or University.</p>
+    <div class="scanline"></div>
   </section>
 
-  <!-- Summary / Table of contents -->
+  <!-- Summary -->
   <section class="content">
     <h2>📑 Project Summary</h2>
+
     <ul class="project-summary">
       <li><a href="#cloud">Cloud & Identity</a></li>
       <li>
         <a href="#personal">Personal Projects</a>
         <ul>
           <li><a href="#Introo">Introduction</a></li>
-          <li><a href="#Cloudflare">CloudFlare</a></li>
+          <li><a href="#Cloudflare">Cloudflare</a></li>
         </ul>
       </li>
     </ul>
   </section>
 
-  <!-- Project sections -->
+  <!-- Cloud section -->
   <section id="cloud" class="project-section">
     <h2>☁️ Cloud & Administration using Intune</h2>
-    <p>Context: AzureAD administration, Intune deployments, SSO integrations. Add technical details and screenshots here.</p>
+    <p>AzureAD administration, Intune deployments, SSO integrations, and identity management.</p>
   </section>
 
+  <!-- Personal Projects -->
   <section id="personal" class="project-section">
     <h2>Personal Projects</h2>
     <p>Some of my personal initiatives and explorations outside of work.</p>
 
     <div id="Introo" class="sub-project">
       <h3>Introduction</h3>
-      <p>I have understood quickly that if I am not studying anymore I will be outperformed by others and that it will be complicated to keep a level of understanding to keep working in companies. Building home labs with PFsense, proxy servers, load balancers, and experimenting with certificates and stress tests. The goal of this project is to gain some skills into Linux servers and proxy usage.</p>
+      <p>
+        I quickly understood that if I stop studying, I will be outperformed by others.  
+        Building home labs with PFsense, proxy servers, load balancers, and experimenting with certificates and stress tests helps me stay sharp.
+      </p>
     </div>
 
     <div id="Cloudflare" class="sub-project">
       <h3>Cloudflare</h3>
       <p>
-        To have a proper website and a certificate, HTTPS and a secured tunnel I have decided to use Cloudflare.<br><br>
-        First I have bought a domain name : cyber-corp.org. Next I have configured the tunnel between my machine and Cloudflare. 
-        In this section I will show you how I have achieved to do that.
+        To host a secure website with HTTPS and a protected tunnel, I chose Cloudflare.<br><br>
+        I bought a domain name (cyber-corp.org), configured a Cloudflare Tunnel, and set up access policies.
       </p>
 
-      <!-- Première série d’images -->
+      <!-- Image grid -->
       <div class="photo-grid">
         <figure>
-          <img src="Pictures/Step1.png" alt="Domain setup screenshot">
+          <img src="Pictures/Step1.png" alt="">
           <figcaption>Buying and configuring the domain cyber-corp.org</figcaption>
         </figure>
         <figure>
-          <img src="Pictures/step2.png" alt="Cloudflare tunnel screenshot">
-          <figcaption>Setting up the Cloudflare tunnel for secure HTTPS access</figcaption>
+          <img src="Pictures/step2.png" alt="">
+          <figcaption>Setting up the Cloudflare tunnel</figcaption>
         </figure>
         <figure>
-          <img src="Pictures/step3.png" alt="Create Cloudflare tunnel screenshot">
-          <figcaption>Put the name that you want for the Cloudflare tunnel</figcaption>
+          <img src="Pictures/step3.png" alt="">
+          <figcaption>Naming the Cloudflare tunnel</figcaption>
         </figure>
         <figure>
-          <img src="Pictures/step4.png" alt="Cloudflare tunnel connector">
-          <figcaption>Here you have the connector for the Cloudflare tunnel. It will be a docker installed in the server where you have your website or your server cluster.</figcaption>
+          <img src="Pictures/step4.png" alt="">
+          <figcaption>Cloudflare tunnel connector (Docker)</figcaption>
         </figure>
         <figure>
-          <img src="Pictures/step5.png" alt="Cloudflare tunnel connector route">
-          <figcaption>Here there is the route connector that will allow to publish my website without exposing my private IP. Also the website will be reachable with my official domain name that I have bought at Cloudflare.</figcaption>
+          <img src="Pictures/step5.png" alt="">
+          <figcaption>Route connector for publishing the website</figcaption>
         </figure>
       </div>
 
-      <br><p>
-        Now that I have finished to create my tunnel we have to create some policies 
-        and manage the access to this website
+      <p>
+        After creating the tunnel, I configured access policies.
       </p>
 
       <div class="photo-grid">
         <figure>
-          <img src="Pictures/Step9.png" alt="Policy creation screenshot">
-          <figcaption>Finding the path to create the policy for the website</figcaption>
+          <img src="Pictures/Step9.png" alt="">
+          <figcaption>Finding the policy creation menu</figcaption>
         </figure>
         <figure>
-          <img src="Pictures/Step7.png" alt="Policy assignment screenshot">
-          <figcaption> Here I am defining the Policy that I will apply to my website. For exemple here I have setup the acces to be allowed and the session to have 24 hour lifespan. The authentication methode will be a pin code for the simplicity of the situation. There is many other options like email authentication. I just have to add the authorized emails and they will receive a confirmation in their mailbox.</figcaption>
+          <img src="Pictures/Step7.png" alt="">
+          <figcaption>Defining access rules (PIN code, session duration)</figcaption>
         </figure>
         <figure>
-          <img src="Pictures/Step7bis.png" alt="Access management screenshot">
-          <figcaption> This is the alternate solution that I have to control the access of my website, with an email logon</figcaption>
+          <img src="Pictures/Step7bis.png" alt="">
+          <figcaption>Email authentication alternative</figcaption>
         </figure>
         <figure>
-          <img src="Pictures/Step8.png" alt="Access management screenshot">
-          <figcaption> When finished creating the policy, you will land here where there is the recap of all the policies created.</figcaption>
+          <img src="Pictures/Step8.png" alt="">
+          <figcaption>Policy summary</figcaption>
         </figure>
       </div>
 
-      <br><p>
-        Now that I have finished to create my acces policy I have to create my application in Cloudflare
+      <p>
+        Finally, I created the Cloudflare application.
       </p>
 
       <div class="photo-grid">
         <figure>
-          <img src="Pictures/Step9.png" alt="Policy creation screenshot">
-          <figcaption>Creating a new application (My website in this case) into Cloudflare
-        <figure>
-          <img src="Pictures/Step10.png" alt="Policy assignment screenshot">
-          <figcaption> Choose how you're app is hosted, for me it will be self hosted</figcaption>
+          <img src="Pictures/Step9.png" alt="">
+          <figcaption>Creating a new application</figcaption>
         </figure>
         <figure>
-          <img src="Pictures/Step11.png" alt="Access management screenshot">
-          <figcaption> Here we are going to setup the application with Subdomain, URL</figcaption>
+          <img src="Pictures/Step10.png" alt="">
+          <figcaption>Selecting hosting type (self-hosted)</figcaption>
         </figure>
         <figure>
-          <img src="Pictures/Step12.png" alt="Access management screenshot">
-          <figcaption> And thats it the application have been created ! (A CORRIGER)</figcaption>
+          <img src="Pictures/Step11.png" alt="">
+          <figcaption>Setting subdomain and URL</figcaption>
+        </figure>
+        <figure>
+          <img src="Pictures/Step12.png" alt="">
+          <figcaption>Application created successfully</figcaption>
         </figure>
       </div>
 
@@ -141,7 +219,8 @@
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 My Website | Enjoy your visit !</p>
+    <p>© 2025 CyberSpace Portfolio | Stay Secure</p>
   </footer>
+
 </body>
 </html>
