@@ -3,84 +3,164 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Skils & Education</title>
+  <title>My Skills & Education</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+
   <!-- Navigation bar -->
   <header class="navbar">
-    <div class="logo">My Website !</div>
+    <div class="logo">Myportfolio</div>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="map.html">Map</a></li>
-        <li><a href="skills.html">Skils</a></li>
-        <li><a href="hobbies.html">Hobbies</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="timeline.html">Timeline</a></li>
+      <ul class="nav-icons">
+
+        <!-- HOME -->
+        <li>
+          <a href="index.html" class="nav-item">
+            <span class="icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-6 9 6v10a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V12H9v7a2 2 0 0 1-2 2H3z"/>
+              </svg>
+            </span>
+            <span class="text">Home</span>
+          </a>
+        </li>
+
+        <!-- MAP -->
+        <li>
+          <a href="map.html" class="nav-item">
+            <span class="icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l-6 3V6l6-3 6 3 6-3v15l-6 3-6-3z"/>
+              </svg>
+            </span>
+            <span class="text">Map</span>
+          </a>
+        </li>
+
+        <!-- SKILLS (active) -->
+        <li>
+          <a href="skills.html" class="nav-item" style="color:#00bfff;">
+            <span class="icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c0 .69.28 1.32.73 1.77.45.45 1.08.73 1.77.73H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+              </svg>
+            </span>
+            <span class="text">Skills</span>
+          </a>
+        </li>
+
+        <!-- HOBBIES -->
+        <li>
+          <a href="hobbies.html" class="nav-item">
+            <span class="icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 20l9-5-9-5-9 5 9 5z"/>
+                <path d="M12 12l9-5-9-5-9 5 9 5z"/>
+              </svg>
+            </span>
+            <span class="text">Hobbies</span>
+          </a>
+        </li>
+
+        <!-- PROJECTS -->
+        <li>
+          <a href="projects.html" class="nav-item">
+            <span class="icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 3h18v4H3z"/>
+                <path d="M3 7h18v14H3z"/>
+              </svg>
+            </span>
+            <span class="text">Projects</span>
+          </a>
+        </li>
+
+        <!-- TIMELINE -->
+        <li>
+          <a href="timeline.html" class="nav-item">
+            <span class="icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
+            </span>
+            <span class="text">Timeline</span>
+          </a>
+        </li>
+
       </ul>
     </nav>
   </header>
 
   <!-- Hero section -->
-  <section class="hero">
-    <h1>My Skills & Education</h1>
-    <p>Professional experience at <strong>Newrest HQ</strong>, combined with academic training and personal projects.</p>
+  <section class="hero cyber-hero">
+    <h1 class="cyber-title">My Skills & Education</h1>
+    <p class="cyber-subtitle">Professional experience at <strong>Newrest HQ</strong>, combined with academic training and personal projects.</p>
+    <div class="scanline"></div>
   </section>
 
   <!-- Experience section -->
   <section class="content">
     <h2>💼 Professional Experience</h2>
     <p class="subtitle">All experience gained at <strong>Newrest HQ</strong></p>
+
     <div class="experience-grid">
       <div class="exp-block">
         <h3>Cloud & Identity</h3>
         <ul>
-          <li>AzureAD administration (users, groups, hybrid OnPremise + Cloud)</li>
+          <li>AzureAD administration</li>
           <li>SSO applications Azure</li>
-          <li>Intune administration (secure deployments, group organization)</li>
+          <li>Intune administration</li>
         </ul>
       </div>
+
       <div class="exp-block">
         <h3>Collaboration & Office</h3>
         <ul>
           <li>Office 365: SharePoint, Exchange, Teams</li>
           <li>License management</li>
-          <li>Training IT managers in best practices (EN/ES/FR)</li>
+          <li>Training IT managers (EN/ES/FR)</li>
         </ul>
       </div>
+
       <div class="exp-block">
         <h3>Infrastructure</h3>
         <ul>
-          <li>Virtualization: HyperV & VMware</li>
-          <li>Linux personal projects (proxy, load balancer, PFsense, certificates, stress tests)</li>
-          <li>Deployment of antivirus solutions</li>
+          <li>HyperV & VMware</li>
+          <li>Linux projects (proxy, load balancer, PFsense…)</li>
+          <li>Antivirus deployment</li>
         </ul>
       </div>
+
       <div class="exp-block">
         <h3>Cybersecurity</h3>
         <ul>
-          <li>Windows Defender training & phishing campaigns</li>
-          <li>Certification MOOC ANSSI</li>
+          <li>Phishing campaigns</li>
+          <li>MOOC ANSSI</li>
           <li>Cisco CyberEssentials</li>
           <li>Cisco Ethical Hacker (in progress)</li>
         </ul>
       </div>
+
       <div class="exp-block">
         <h3>International Role</h3>
         <ul>
-          <li>Key member of international IT team during acquisitions & openings</li>
-          <li>Travel with executives, manage stress & deadlines</li>
-          <li>Multilingual collaboration (EN/FR/ES)</li>
-          <li>Follow‑up meetings across 53 countries</li>
+          <li>IT support during acquisitions</li>
+          <li>Travel with executives</li>
+          <li>Multilingual collaboration</li>
+          <li>Meetings across 53 countries</li>
         </ul>
       </div>
+
       <div class="exp-block">
         <h3>Other Skills</h3>
         <ul>
-          <li>Payroll export setup (server → SFTP)</li>
-          <li>Forensics at university</li>
-          <li>Dactylographie (touch typing)</li>
+          <li>Payroll export (server → SFTP)</li>
+          <li>Forensics</li>
+          <li>Touch typing</li>
         </ul>
       </div>
     </div>
@@ -89,11 +169,13 @@
   <!-- Education section -->
   <section class="content">
     <h2>🎓 Education</h2>
+
     <div class="education-grid">
       <div class="edu-block">
         <h3>IUT de Blagnac</h3>
-        <p>BUT Réseaux et Télécommunications<br>Parcours Cybersécurité</p>
+        <p>BUT Réseaux & Télécommunications<br>Parcours Cybersécurité</p>
       </div>
+
       <div class="edu-block">
         <h3>UQAC Chicoutimi, Québec</h3>
         <p>Baccalauréat en Informatique</p>
@@ -103,7 +185,8 @@
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 My Website | Enjoy your visit !</p>
+    <p>© 2025 CyberSpace Portfolio | Stay Secure</p>
   </footer>
+
 </body>
 </html>
