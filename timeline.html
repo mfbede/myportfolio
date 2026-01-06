@@ -1,4 +1,4 @@
-timeline<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -6,78 +6,155 @@ timeline<!DOCTYPE html>
   <title>My Timeline</title>
   <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
+
   <!-- Navigation bar -->
   <header class="navbar">
-    <div class="logo">My Website !</div>
+    <div class="logo">Myportfolio</div>
     <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="map.html">Map</a></li>
-        <li><a href="skills.html">Skills</a></li>
-        <li><a href="hobbies.html">Hobbies</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="timeline.html">Timeline</a></li>
+      <ul class="nav-icons">
+
+        <!-- HOME -->
+        <li>
+          <a href="index.html" class="nav-item">
+            <span class="icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 9l9-6 9 6v10a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V12H9v7a2 2 0 0 1-2 2H3z"/>
+              </svg>
+            </span>
+            <span class="text">Home</span>
+          </a>
+        </li>
+
+        <!-- MAP -->
+        <li>
+          <a href="map.html" class="nav-item">
+            <span class="icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 18l-6 3V6l6-3 6 3 6-3v15l-6 3-6-3z"/>
+              </svg>
+            </span>
+            <span class="text">Map</span>
+          </a>
+        </li>
+
+        <!-- SKILLS -->
+        <li>
+          <a href="skills.html" class="nav-item">
+            <span class="icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="3"/>
+                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c0 .69.28 1.32.73 1.77.45.45 1.08.73 1.77.73H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+              </svg>
+            </span>
+            <span class="text">Skills</span>
+          </a>
+        </li>
+
+        <!-- HOBBIES -->
+        <li>
+          <a href="hobbies.html" class="nav-item">
+            <span class="icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 20l9-5-9-5-9 5 9 5z"/>
+                <path d="M12 12l9-5-9-5-9 5 9 5z"/>
+              </svg>
+            </span>
+            <span class="text">Hobbies</span>
+          </a>
+        </li>
+
+        <!-- PROJECTS -->
+        <li>
+          <a href="projects.html" class="nav-item">
+            <span class="icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M3 3h18v4H3z"/>
+                <path d="M3 7h18v14H3z"/>
+              </svg>
+            </span>
+            <span class="text">Projects</span>
+          </a>
+        </li>
+
+        <!-- TIMELINE (active) -->
+        <li>
+          <a href="timeline.html" class="nav-item" style="color:#00bfff;">
+            <span class="icon">
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="12" cy="12" r="10"/>
+                <path d="M12 6v6l4 2"/>
+              </svg>
+            </span>
+            <span class="text">Timeline</span>
+          </a>
+        </li>
+
       </ul>
     </nav>
   </header>
 
   <!-- Hero section -->
-  <section class="hero">
-    <h1>My Timeline</h1>
-    <p>A journey through my parcours, step by step.</p>
+  <section class="hero cyber-hero">
+    <h1 class="cyber-title">My Timeline</h1>
+    <p class="cyber-subtitle">A journey through my parcours, step by step.</p>
+    <div class="scanline"></div>
   </section>
 
   <!-- Timeline -->
-  <section class="timeline">
+  <section class="timeline-container">
+
     <div class="timeline-line"></div>
 
     <div class="timeline-item left">
-      <div class="content">
+      <div class="timeline-card">
         <h3>September 2021</h3>
         <p>Beginning of my studies in IT at IUT de Blagnac.</p>
       </div>
     </div>
 
     <div class="timeline-item right">
-      <div class="content">
+      <div class="timeline-card">
         <h3>August 2023</h3>
         <p>Exchange program at UQAC in Chicoutimi, Québec.</p>
       </div>
     </div>
 
     <div class="timeline-item left">
-      <div class="content">
+      <div class="timeline-card">
         <h3>1st October 2024</h3>
         <p>Joining Newrest HQ and working on IT infrastructure.</p>
       </div>
     </div>
 
     <div class="timeline-item right">
-      <div class="content">
+      <div class="timeline-card">
         <h3>9th December 2024</h3>
-        <p> First International mission at Santiago de Chile.</p>
+        <p>First international mission at Santiago de Chile.</p>
       </div>
     </div>
 
     <div class="timeline-item left">
-      <div class="content">
+      <div class="timeline-card">
         <h3>17th February 2025</h3>
-        <p> Second International mission at Bogota in Colombia</p>
+        <p>Second international mission at Bogotá, Colombia.</p>
       </div>
     </div>
 
     <div class="timeline-item right">
-      <div class="content">
+      <div class="timeline-card">
         <h3>Step 6</h3>
-        <p>Continuous learning: Cisco certifications, ANSSI MOOC, personal Linux projects.</p>
+        <p>Continuous learning: Cisco certifications, ANSSI MOOC, Linux projects.</p>
       </div>
     </div>
+
   </section>
 
   <!-- Footer -->
   <footer>
-    <p>© 2025 My Website | Enjoy your visit !</p>
+    <p>© 2025 CyberSpace Portfolio | Stay Secure</p>
   </footer>
+
 </body>
 </html>
