@@ -1,147 +1,62 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Projects</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
+<!-- Summary -->
+<section class="content">
+  <h2>📑 Project Summary</h2>
 
-<body>
+  <ul class="project-summary">
 
-  <!-- Navigation bar -->
-  <header class="navbar">
-    <div class="logo">Myportfolio</div>
-    <nav>
-      <ul class="nav-icons">
-
-        <!-- HOME -->
-        <li>
-          <a href="index.html" class="nav-item">
-            <span class="icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M3 9l9-6 9 6v10a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V12H9v7a2 2 0 0 1-2 2H3z"/>
-              </svg>
-            </span>
-            <span class="text">Home</span>
-          </a>
-        </li>
-
-        <!-- MAP -->
-        <li>
-          <a href="map.html" class="nav-item">
-            <span class="icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 18l-6 3V6l6-3 6 3 6-3v15l-6 3-6-3z"/>
-              </svg>
-            </span>
-            <span class="text">Map</span>
-          </a>
-        </li>
-
-        <!-- SKILLS -->
-        <li>
-          <a href="skils.html" class="nav-item">
-            <span class="icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="3"/>
-                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c0 .69.28 1.32.73 1.77.45.45 1.08.73 1.77.73H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
-              </svg>
-            </span>
-            <span class="text">Skills</span>
-          </a>
-        </li>
-
-        <!-- HOBBIES -->
-        <li>
-          <a href="hobbies.html" class="nav-item">
-            <span class="icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 20l9-5-9-5-9 5 9 5z"/>
-                <path d="M12 12l9-5-9-5-9 5 9 5z"/>
-              </svg>
-            </span>
-            <span class="text">Hobbies</span>
-          </a>
-        </li>
-
-        <!-- PROJECTS (active) -->
-        <li>
-          <a href="projects.html" class="nav-item" style="color:#00bfff;">
-            <span class="icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M3 3h18v4H3z"/>
-                <path d="M3 7h18v14H3z"/>
-              </svg>
-            </span>
-            <span class="text">Projects</span>
-          </a>
-        </li>
-
-        <!-- TIMELINE -->
-        <li>
-          <a href="timeline.html" class="nav-item">
-            <span class="icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"/>
-                <path d="M12 6v6l4 2"/>
-              </svg>
-            </span>
-            <span class="text">Timeline</span>
-          </a>
-        </li>
-
-      </ul>
-    </nav>
-  </header>
-
-  <!-- Hero section -->
-  <section class="hero cyber-hero">
-    <h1 class="cyber-title">My Projects</h1>
-    <p class="cyber-subtitle">Here you will find my projects and learning projects</p>
-    <div class="scanline"></div>
-  </section>
-
-  <!-- Summary -->
-  <section class="content">
-    <h2>📑 Project Summary</h2>
-
-    <ul class="project-summary">
-      <li><a href="#htb">Learning projects</a></li>
+    <!-- LEARNING PROJECTS -->
+    <li>
+      <a href="#learning">Learning Projects</a>
       <ul>
-          <li><a href="#Intro">Introduction</a></li>
-          <li><a href="#Cloudflare">CDSA</a></li>
-        </ul>
-      <li>
-        <a href="#personal">Personal Projects</a>
-        <ul>
-          <li><a href="#Introo">Introduction</a></li>
-          <li><a href="#Cloudflare">Cloudflare</a></li>
-        </ul>
-      </li>
-    </ul>
-  </section>
+        <li><a href="#learning-intro">Introduction</a></li>
+        <li><a href="#learning-cdsa">CDSA</a></li>
+      </ul>
+    </li>
 
-  <!-- HTB Learning CDSA -->
-  <section id="htb" class="project-section">
-    <h2>Introduction</h2>
-    <p>TEST</p>
+    <!-- PERSONAL PROJECTS -->
+    <li>
+      <a href="#personal">Personal Projects</a>
+      <ul>
+        <li><a href="#personal-intro">Introduction</a></li>
+        <li><a href="#personal-cloudflare">Cloudflare</a></li>
+      </ul>
+    </li>
+
+  </ul>
+</section>
+
+<!-- LEARNING PROJECTS ( HTB ) -->
+<section id="learning" class="project-section">
+  <h2>Learning Projects</h2>
+  <p class="subtitle">Projects completed during my training and continuous learning.</p>
+
+  <!-- Subtitle 1 -->
+  <div id="learning-intro" class="sub-project">
     <h3>Introduction</h3>
     <p>TEST</p>
-  </section>
+  </div>
 
-  <!-- Personal Projects -->
-  <section id="personal" class="project-section">
-    <h2>Personal Projects</h2>
+  <!-- Subtitle 2 -->
+  <div id="learning-cdsa" class="sub-project">
+    <h3>CDSA</h3>
+    <p>TEST</p>
+  </div>
+</section>
+
+<!-- PERSONAL PROJECTS -->
+<section id="personal" class="project-section">
+  <h2>Personal Projects</h2>
+  <p class="subtitle">Independent projects built to improve my skills and explore new technologies.</p>
+
+  <!-- Subtitle 1 -->
+  <div id="personal-intro" class="sub-project">
+    <h3>Introduction</h3>
     <p>Some of my personal initiatives and explorations outside of work.</p>
+  </div>
 
-      
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2025 CyberSpace Portfolio | Stay Secure</p>
-  </footer>
-
-</body>
-</html>
+  <!-- Subtitle 2 -->
+  <div id="personal-cloudflare" class="sub-project">
+    <h3>Cloudflare</h3>
+    <p>Cloudflare project description here.</p>
+  </div>
+</section>
