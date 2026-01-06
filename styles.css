@@ -29,7 +29,7 @@ body {
   top: 0;
   z-index: 1000;
   border-bottom: 1px solid #111;
-  height: 60px; /* keeps navbar thin */
+  height: 60px;
 }
 
 .logo {
@@ -39,17 +39,15 @@ body {
   color: #00bfff;
 }
 
-/* NAV ICONS */
 .nav-icons {
   list-style: none;
   display: flex;
-  gap: 2.5rem; /* equal spacing */
+  gap: 2.5rem;
 }
 
-/* FIXED WIDTH FOR ALL ITEMS */
 .nav-item {
-  width: 60px; /* ensures equal width */
-  height: 30px; /* keeps navbar thin */
+  width: 60px;
+  height: 30px;
   position: relative;
   text-decoration: none;
   color: #aaa;
@@ -58,13 +56,11 @@ body {
   align-items: center;
 }
 
-/* ICON */
 .nav-item .icon {
   position: absolute;
   transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
-/* TEXT (overlays icon) */
 .nav-item .text {
   position: absolute;
   opacity: 0;
@@ -74,7 +70,6 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* HOVER EFFECT: icon fades out, text fades in */
 .nav-item:hover .icon {
   opacity: 0;
   transform: translateY(-6px);
@@ -136,21 +131,20 @@ body {
 }
 
 /* =========================
-   MAP FIX (IMPORTANT)
+   MAP
    ========================= */
 #map,
-/* MAP CONTAINER (centered rectangle) */
 .cyber-map {
-  width: 90%;          /* leaves space on the sides */
-  max-width: 1200px;   /* prevents it from becoming too wide */
-  height: 600px;       /* map height */
-  margin: 2rem auto;   /* centers the map */
+  width: 90%;
+  max-width: 1200px;
+  height: 600px;
+  margin: 2rem auto;
   border: 1px solid #111;
   border-radius: 6px;
 }
 
 /* =========================
-   FEATURES (MINIMALIST)
+   FEATURES
    ========================= */
 .features-clean {
   display: flex;
@@ -199,332 +193,8 @@ footer {
 }
 
 /* =========================
-   RESPONSIVE DESIGN
+   CONTENT SECTIONS
    ========================= */
-
-/* Tablets */
-@media (max-width: 900px) {
-  .cyber-title {
-    font-size: 3rem;
-  }
-
-  .cyber-subtitle {
-    font-size: 1.15rem;
-  }
-
-  .features-clean {
-    flex-direction: column;
-    gap: 2.5rem;
-  }
-
-  .nav-icons {
-    gap: 1.5rem;
-  }
-
-  /* Map responsive */
-  #map,
-  .cyber-map {
-    height: 450px;
-  }
-}
-
-/* Phones */
-@media (max-width: 600px) {
-  body {
-    font-size: 16px;
-  }
-
-  .cyber-title {
-    font-size: 2.4rem;
-  }
-
-  .cyber-subtitle {
-    font-size: 1rem;
-  }
-
-  .nav-item {
-    width: 50px;
-  }
-
-  .nav-item .text {
-    font-size: 0.9rem;
-  }
-
-  .features-clean {
-    padding: 2rem 1rem;
-  }
-
-  /* Map responsive */
-  #map,
-  .cyber-map {
-    height: 350px;
-  }
-}
-/* =========================
-   Global Reset & Base Styles
-   ========================= */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: 'Helvetica Neue', Arial, sans-serif;
-  background-color: #000;
-  color: #fff;
-  line-height: 1.6;
-  font-size: 18px;
-}
-
-/* =========================
-   NAVBAR
-   ========================= */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.7rem 2rem;
-  background: rgba(0, 0, 0, 0.85);
-  position: fixed;
-  width: 100%;
-  top: 0;
-  z-index: 1000;
-  border-bottom: 1px solid #111;
-  height: 60px; /* keeps navbar thin */
-}
-
-.logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  letter-spacing: 1px;
-  color: #00bfff;
-}
-
-/* NAV ICONS */
-.nav-icons {
-  list-style: none;
-  display: flex;
-  gap: 2.5rem; /* equal spacing */
-}
-
-/* FIXED WIDTH FOR ALL ITEMS */
-.nav-item {
-  width: 60px; /* ensures equal width */
-  height: 30px; /* keeps navbar thin */
-  position: relative;
-  text-decoration: none;
-  color: #aaa;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* ICON */
-.nav-item .icon {
-  position: absolute;
-  transition: opacity 0.35s ease, transform 0.35s ease;
-}
-
-/* TEXT (overlays icon) */
-.nav-item .text {
-  position: absolute;
-  opacity: 0;
-  transform: translateY(6px);
-  transition: opacity 0.35s ease, transform 0.35s ease;
-  font-size: 1rem;
-  letter-spacing: 0.5px;
-}
-
-/* HOVER EFFECT: icon fades out, text fades in */
-.nav-item:hover .icon {
-  opacity: 0;
-  transform: translateY(-6px);
-}
-
-.nav-item:hover .text {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.nav-item:hover {
-  color: #00bfff;
-}
-
-/* =========================
-   HERO SECTION
-   ========================= */
-.hero {
-  height: 60vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  padding-top: 6rem;
-}
-
-.cyber-hero {
-  background: radial-gradient(circle at center, rgba(0,191,255,0.12), transparent 70%),
-              linear-gradient(to bottom, #000, #0a0f14);
-}
-
-.cyber-title {
-  font-size: 3.6rem;
-  letter-spacing: 1px;
-  text-shadow: 0 0 10px rgba(0,191,255,0.3);
-}
-
-.cyber-subtitle {
-  font-size: 1.3rem;
-  color: #9ecfe8;
-  margin-top: 0.5rem;
-}
-
-.scanline {
-  width: 180px;
-  height: 3px;
-  background: #00bfff;
-  margin: 1.5rem auto;
-  animation: scan 4s linear infinite;
-  opacity: 0.8;
-  border-radius: 2px;
-}
-
-@keyframes scan {
-  0% { transform: scaleX(0); opacity: 0.2; }
-  50% { transform: scaleX(1); opacity: 1; }
-  100% { transform: scaleX(0); opacity: 0.2; }
-}
-
-/* =========================
-   MAP FIX (IMPORTANT)
-   ========================= */
-#map,
-.cyber-map {
-  width: 100%;
-  height: 600px; /* hauteur nécessaire pour afficher la carte */
-  margin-top: 2rem;
-  border: 1px solid #111;
-  border-radius: 6px;
-}
-
-/* =========================
-   FEATURES (MINIMALIST)
-   ========================= */
-.features-clean {
-  display: flex;
-  justify-content: center;
-  gap: 4rem;
-  padding: 4rem 2rem;
-  background: #000;
-}
-
-.feature-clean {
-  max-width: 260px;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s ease forwards;
-}
-
-.feature-clean:nth-child(2) { animation-delay: 0.2s; }
-.feature-clean:nth-child(3) { animation-delay: 0.4s; }
-
-.feature-clean h3 {
-  color: #00bfff;
-  margin-bottom: 0.5rem;
-  font-size: 1.5rem;
-}
-
-.feature-clean p {
-  color: #aaa;
-  font-size: 1.05rem;
-}
-
-@keyframes fadeInUp {
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* =========================
-   FOOTER
-   ========================= */
-footer {
-  text-align: center;
-  padding: 1.5rem;
-  background: #000;
-  color: #666;
-  margin-top: 2rem;
-  font-size: 1rem;
-}
-
-/* =========================
-   RESPONSIVE DESIGN
-   ========================= */
-
-/* Tablets */
-@media (max-width: 900px) {
-  .cyber-title {
-    font-size: 3rem;
-  }
-
-  .cyber-subtitle {
-    font-size: 1.15rem;
-  }
-
-  .features-clean {
-    flex-direction: column;
-    gap: 2.5rem;
-  }
-
-  .nav-icons {
-    gap: 1.5rem;
-  }
-
-  /* Map responsive */
-  #map,
-  .cyber-map {
-    height: 450px;
-  }
-}
-
-/* Phones */
-@media (max-width: 600px) {
-  body {
-    font-size: 16px;
-  }
-
-  .cyber-title {
-    font-size: 2.4rem;
-  }
-
-  .cyber-subtitle {
-    font-size: 1rem;
-  }
-
-  .nav-item {
-    width: 50px;
-  }
-
-  .nav-item .text {
-    font-size: 0.9rem;
-  }
-
-  .features-clean {
-    padding: 2rem 1rem;
-  }
-
-  /* Map responsive */
-  #map,
-  .cyber-map {
-    height: 350px;
-  }
-}
-
-/* =========================
-   CONTENT SECTIONS (Skills & Education)
-   ========================= */
-
 .content {
   width: 90%;
   max-width: 1100px;
@@ -549,7 +219,6 @@ footer {
 /* =========================
    EXPERIENCE GRID
    ========================= */
-
 .experience-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -589,7 +258,6 @@ footer {
 /* =========================
    EDUCATION GRID
    ========================= */
-
 .education-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -626,7 +294,6 @@ footer {
 /* =========================
    TIMELINE
    ========================= */
-
 .timeline-container {
   width: 90%;
   max-width: 1100px;
@@ -687,7 +354,6 @@ footer {
   line-height: 1.5;
 }
 
-/* Dots */
 .timeline-item::before {
   content: "";
   position: absolute;
@@ -707,7 +373,6 @@ footer {
   left: -7px;
 }
 
-/* Responsive */
 @media (max-width: 800px) {
   .timeline-line {
     left: 8px;
@@ -734,9 +399,8 @@ footer {
 }
 
 /* =========================
-   HOBBIES SECTION
+   HOBBIES
    ========================= */
-
 .hobbies-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -770,9 +434,8 @@ footer {
 }
 
 /* =========================
-   PROJECTS PAGE
+   PROJECTS
    ========================= */
-
 .project-summary {
   list-style: none;
   padding-left: 0;
@@ -832,7 +495,6 @@ footer {
   line-height: 1.5;
 }
 
-/* IMAGE GRID */
 .photo-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -857,4 +519,87 @@ footer {
   margin-top: 0.5rem;
   color: #9ecfe8;
   font-size: 0.95rem;
+}
+
+/* =========================
+   RESPONSIVE DESIGN
+   ========================= */
+
+/* Tablets */
+@media (max-width: 900px) {
+  .cyber-title {
+    font-size: 3rem;
+  }
+
+  .cyber-subtitle {
+    font-size: 1.15rem;
+  }
+
+  .features-clean {
+    flex-direction: column;
+    gap: 2.5rem;
+  }
+
+  .nav-icons {
+    gap: 1.5rem;
+  }
+
+  #map,
+  .cyber-map {
+    height: 450px;
+  }
+}
+
+/* Phones */
+@media (max-width: 600px) {
+
+  /* Hide logo on mobile */
+  .logo {
+    display: none;
+  }
+
+  /* Center icons */
+  nav {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .nav-icons {
+    gap: 1rem;
+  }
+
+  .nav-item {
+    width: 40px;
+  }
+
+  .nav-item .text {
+    font-size: 0.75rem;
+    transform: translateY(8px);
+  }
+
+  .nav-item:hover .icon {
+    transform: translateY(-8px);
+  }
+
+  .nav-item:hover .text {
+    transform: translateY(0);
+  }
+
+  body {
+    font-size: 16px;
+  }
+
+  .cyber-title {
+    font-size: 2.4rem;
+  }
+
+  .cyber-subtitle {
+    font-size: 1rem;
+  }
+
+  #map,
+  .cyber-map {
+    height: 350px;
+  }
 }
