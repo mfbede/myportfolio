@@ -148,19 +148,20 @@
                   - Question 1 : On the Wazuh log file identify all events that indicate potential credential compromise. Check the event ID 4668 and verify full path of the parent process name that executed a credential dumping tool.
                   </p>
                 <div class="wiki-code">
-                First step : Get the file and unzip it
+                <p>First step : Get the file and unzip it</p>
           <pre><code>
                 Wget https://pathof.thefile.com/wazuh_export.zip
                 unzip wazuh_export.zip
           </code></pre>
-                Second step : use a command to find into the file what is the parent process name that executed a credential dumping tool.
+                <p>Second step : use a command to find into the file what is the parent process name that executed a credential dumping tool.
                 Note that before doing this I have checked the file to see if how he was built in order to find what I want thanks to grep tool.
+                </p>
           <pre><code>
                 grep -B5 "mimikatz" wazuh_export.json
                 "newProcessName": "C:\\Users\\Administrator\\Downlads\\mimikatz.exe",
                 "parentProcessName": "C:\\Program Files\\Mozilla Firefox\\firefox.exe",
           </code></pre>
-                 The answer for the first question is : C:\\Program Files\\Mozilla Firefox\\firefox.exe       
+                 <p>The answer for the first question is : C:\\Program Files\\Mozilla Firefox\\firefox.exe </p>
         </div>
         
         <br>
