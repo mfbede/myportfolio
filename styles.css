@@ -16,7 +16,7 @@ body {
 }
 
 /* =========================
-   NAVBAR (Corrigée pour le Responsive)
+   NAVBAR (Responsive)
    ========================= */
 .navbar {
   display: flex;
@@ -83,7 +83,7 @@ body {
 }
 
 .nav-item:hover {
-  color: #00bfff;
+  color: #00bfff; /* Le texte de navigation reste bleu pour le contraste */
 }
 
 /* =========================
@@ -237,7 +237,7 @@ footer {
 
 .exp-block:hover {
   transform: translateY(-4px);
-  border-color: #00bfff;
+  border-color: #bbb; /* Gris au survol */
 }
 
 .exp-block h3 {
@@ -278,7 +278,7 @@ footer {
 
 .edu-block:hover {
   transform: translateY(-4px);
-  border-color: #00bfff;
+  border-color: #bbb; /* Gris au survol */
 }
 
 .edu-block h3 {
@@ -342,7 +342,7 @@ footer {
 
 .timeline-card:hover {
   transform: translateY(-4px);
-  border-color: #00bfff;
+  border-color: #bbb; /* Gris au survol */
 }
 
 .timeline-card h3 {
@@ -395,7 +395,7 @@ footer {
 
 .hobby-block:hover {
   transform: translateY(-4px);
-  border-color: #00bfff;
+  border-color: #bbb; /* Gris au survol */
 }
 
 .hobby-block h3 {
@@ -458,7 +458,7 @@ footer {
 
 .sub-project:hover {
   transform: translateY(-4px);
-  border-color: #00bfff;
+  border-color: #bbb; /* Gris au survol */
 }
 
 .sub-project h3 {
@@ -529,83 +529,25 @@ footer {
    RESPONSIVE DESIGN
    ========================= */
 
-/* Tablets */
 @media (max-width: 900px) {
-  .cyber-title {
-    font-size: 3rem;
-  }
-
-  .cyber-subtitle {
-    font-size: 1.15rem;
-  }
-
-  .features-clean {
-    flex-direction: column;
-    gap: 2.5rem;
-  }
-
-  .nav-icons {
-    gap: 1rem; /* Réduit pour tablettes */
-  }
-
-  #map,
-  .cyber-map {
-    height: 450px;
-  }
+  .cyber-title { font-size: 3rem; }
+  .cyber-subtitle { font-size: 1.15rem; }
+  .features-clean { flex-direction: column; gap: 2.5rem; }
+  .nav-icons { gap: 1rem; }
+  #map, .cyber-map { height: 450px; }
 }
 
-/* Phones */
 @media (max-width: 650px) {
-  .logo {
-    display: none; /* Cache le logo pour laisser place aux icônes */
-  }
-
-  .navbar {
-    padding: 0 1rem;
-    justify-content: center;
-  }
-
-  nav {
-    width: 100%;
-  }
-
-  .nav-icons {
-    width: 100%;
-    justify-content: space-around; /* Répartit les icônes sur mobile */
-    gap: 0;
-  }
-
-  .nav-item {
-    min-width: 45px;
-  }
-
-  .nav-item .text {
-    font-size: 0.75rem;
-    transform: translateY(8px);
-  }
-
-  .nav-item:hover .icon {
-    transform: translateY(-8px);
-  }
-
-  .nav-item:hover .text {
-    transform: translateY(0);
-  }
-
-  body {
-    font-size: 16px;
-  }
-
-  .cyber-title {
-    font-size: 2.4rem;
-  }
-
-  .cyber-subtitle {
-    font-size: 1rem;
-  }
-
-  #map,
-  .cyber-map {
-    height: 350px;
-  }
+  .logo { display: none; }
+  .navbar { padding: 0 1rem; justify-content: center; }
+  nav { width: 100%; }
+  .nav-icons { width: 100%; justify-content: space-around; gap: 0; }
+  .nav-item { min-width: 45px; }
+  .nav-item .text { font-size: 0.75rem; transform: translateY(8px); }
+  .nav-item:hover .icon { transform: translateY(-8px); }
+  .nav-item:hover .text { transform: translateY(0); }
+  body { font-size: 16px; }
+  .cyber-title { font-size: 2.4rem; }
+  .cyber-subtitle { font-size: 1rem; }
+  #map, .cyber-map { height: 350px; }
 }
