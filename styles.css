@@ -526,16 +526,16 @@ footer {
 }
 
 /* =========================
-   WIKI CODE STYLE (Nouveau)
+   WIKI CODE STYLE 
    ========================= */
 .wiki-code {
-  background: #05070a; /* Plus sombre que .sub-project */
+  background: #05070a; 
   border: 1px solid #222;
-  border-left: 4px solid #00bfff; /* Barre d'accentuation style Wiki */
+  border-left: 4px solid #ffb347; /* Orange pastel (Pastel Orange) */
   border-radius: 4px;
   padding: 1rem;
   margin: 1.5rem 0;
-  overflow-x: auto; /* Permet le scroll horizontal si le code est long */
+  overflow-x: auto; 
 }
 
 .wiki-code pre {
