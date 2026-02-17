@@ -16,13 +16,13 @@ body {
 }
 
 /* =========================
-   NAVBAR
+   NAVBAR (Corrigée pour le Responsive)
    ========================= */
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0.7rem 2rem;
+  padding: 0 2rem;
   background: rgba(0, 0, 0, 0.85);
   position: fixed;
   width: 100%;
@@ -37,6 +37,7 @@ body {
   font-weight: bold;
   letter-spacing: 1px;
   color: #00bfff;
+  white-space: nowrap;
 }
 
 .nav-icons {
@@ -46,7 +47,7 @@ body {
 }
 
 .nav-item {
-  width: 60px;
+  min-width: 50px;
   height: 30px;
   position: relative;
   text-decoration: none;
@@ -68,6 +69,7 @@ body {
   transition: opacity 0.35s ease, transform 0.35s ease;
   font-size: 1rem;
   letter-spacing: 0.5px;
+  white-space: nowrap;
 }
 
 .nav-item:hover .icon {
@@ -373,31 +375,6 @@ footer {
   left: -7px;
 }
 
-@media (max-width: 800px) {
-  .timeline-line {
-    left: 8px;
-  }
-
-  .timeline-item {
-    width: 100%;
-    padding-left: 2rem;
-  }
-
-  .timeline-item.left,
-  .timeline-item.right {
-    left: 0;
-    text-align: left;
-  }
-
-  .timeline-item::before {
-    left: 0;
-  }
-
-  .timeline-card {
-    width: 100%;
-  }
-}
-
 /* =========================
    HOBBIES
    ========================= */
@@ -526,12 +503,12 @@ footer {
 }
 
 /* =========================
-   WIKI CODE STYLE 
+   WIKI CODE STYLE (Orange Pastel)
    ========================= */
 .wiki-code {
   background: #05070a; 
   border: 1px solid #222;
-  border-left: 4px solid #ffb347; /* Orange pastel (Pastel Orange) */
+  border-left: 4px solid #ffb347; /* Orange pastel */
   border-radius: 4px;
   padding: 1rem;
   margin: 1.5rem 0;
@@ -568,7 +545,7 @@ footer {
   }
 
   .nav-icons {
-    gap: 1.5rem;
+    gap: 1rem; /* Réduit pour tablettes */
   }
 
   #map,
@@ -578,26 +555,28 @@ footer {
 }
 
 /* Phones */
-@media (max-width: 600px) {
-
-  /* Hide logo on mobile */
+@media (max-width: 650px) {
   .logo {
-    display: none;
+    display: none; /* Cache le logo pour laisser place aux icônes */
   }
 
-  /* Center icons */
-  nav {
-    width: 100%;
-    display: flex;
+  .navbar {
+    padding: 0 1rem;
     justify-content: center;
   }
 
+  nav {
+    width: 100%;
+  }
+
   .nav-icons {
-    gap: 1rem;
+    width: 100%;
+    justify-content: space-around; /* Répartit les icônes sur mobile */
+    gap: 0;
   }
 
   .nav-item {
-    width: 40px;
+    min-width: 45px;
   }
 
   .nav-item .text {
