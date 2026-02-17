@@ -219,7 +219,61 @@ unzip wazuh_export.zip</code></pre>
 }</code></pre>
       </div>
 
-      <p>The answer for the first question is : "imagePath": "C:\\Windows\\PSEXESVC.exe" </p>
+      <p>The answer for the second question is : "imagePath": "C:\\Windows\\PSEXESVC.exe" </p>
+      <br><br>
+
+      <p>
+        -<b> Question 3 :</b> Identify exfiltration activity — file(s) uploaded or outbound traffic. What is the external IP address to which the file diagnostics_data.zip was uploaded ?
+      </p>
+      <br><br>
+      <p>
+        <u>First step :</u> search using grep to find what I need in the JSON file.
+      </p>
+
+      <div class="wiki-code">
+        <pre><code>grep -B5 "diagnostics_data.zip" wazuh_export.json</code></pre>
+      </div>
+
+      <div class="wiki-code">
+        <pre><code>"timestamp": "2025-10-09T05:33:58.102140Z",
+      "rule": {
+        "firedtimes": 3,
+        "mail": false,
+        "level": 9,
+        "description": "Large outbound HTTPS POST with filename diagnostics_data.zip",
+--
+            "image": "C:\\Users\\svc_deployer\\AppData\\Roaming\\updater.exe",
+            "destinationIp": "93.184.216.34",                                        
+            "destinationPort": "443",
+            "protocol": "tcp",
+            "user": "insight\\svc_deployer",
+            "details": "HTTP POST /upload diagnostics_data.zip"
+        </code></pre>
+      </div>
+
+      <p>The answer for the thrid question is : "destinationIp": "93.184.216.34". I know this because a little bit after there is a line with a POST request to upload the zip file in question </p>
+      <br><br>
+
+      <p>
+        -<b> Question 4 :</b> I4."Which user tried to connect to the file share \\fs01\projects" ?
+      </p>
+      <br><br>
+      <p>
+        <u>First step :</u> search using grep to find what I need in the JSON file.
+      </p>
+
+      <div class="wiki-code">
+        <pre><code>grep -B2 -i "projects" wazuh_export.json</code></pre>
+      </div>
+
+      <div class="wiki-code">
+        <pre><code>"destinationPort": "445",
+            "user": "svc_admin",                                                    [---[Solution]---]
+            "details": "SMB connect to \\\\fs01\\projects"
+        </code></pre>
+      </div>
+
+      <p>The answer for the last question is : svc_admin". I know this because in the bottom line there is "details": "SMB connect to \\\\fs01\\projects" that tells me that it was a connection to this shared disk. </p>
       <br><br>
 
       <h4 class="htb-title">Security Monitoring & SIEM Fundamentals</h4>
