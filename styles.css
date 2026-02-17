@@ -526,6 +526,29 @@ footer {
 }
 
 /* =========================
+   WIKI CODE STYLE (Nouveau)
+   ========================= */
+.wiki-code {
+  background: #05070a; /* Plus sombre que .sub-project */
+  border: 1px solid #222;
+  border-left: 4px solid #00bfff; /* Barre d'accentuation style Wiki */
+  border-radius: 4px;
+  padding: 1rem;
+  margin: 1.5rem 0;
+  overflow-x: auto; /* Permet le scroll horizontal si le code est long */
+}
+
+.wiki-code pre {
+  margin: 0;
+}
+
+.wiki-code code {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 0.95rem;
+  color: #e0e0e0;
+}
+
+/* =========================
    RESPONSIVE DESIGN
    ========================= */
 
