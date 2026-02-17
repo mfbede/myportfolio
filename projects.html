@@ -150,8 +150,12 @@
                  <p> 
                    - Question 1 : On the Wazuh log file identify all events that indicate potential credential compromise. Check the event ID 4668 and verify full path of the parent process name that executed a credential dumping tool.
                  </p>
+                
+                <p>
+                    First step : Get the file and unzip it
+                </p>
+
                 <div class="wiki-code">
-                <p>First step : Get the file and unzip it</p>
           <pre><code>
                 Wget https://pathof.thefile.com/wazuh_export.zip
                 unzip wazuh_export.zip
