@@ -145,32 +145,29 @@ body {
   border-radius: 6px;
 }
 /* =========================
-   FEATURES
-   ========================= */
+   FEATURES
+   ========================= */
 .features-clean {
-  display: flex;
-  justify-content: center;
-  gap: 4rem;
-  padding: 4rem 2rem;
-  background: #000;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  padding: 4rem 2rem;
+  background: #000;
 }
 
 .feature-clean {
-  max-width: 260px;
-  text-align: center;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s ease forwards;
+  max-width: 260px;
+  text-align: center;
+  /* Correction ici : On s'assure que c'est bien visible par défaut */
+  opacity: 1; 
+  display: block;
 }
 
-.feature-clean:nth-child(2) { animation-delay: 0.2s; }
-.feature-clean:nth-child(3) { animation-delay: 0.4s; }
-.feature-clean:nth-child(4) { animation-delay: 0.6s; }
-
 .feature-clean h3 {
-  color: #4278D6;
-  margin-bottom: 0.5rem;
-  font-size: 1.5rem;
+  color: #4278D6; 
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
+  /* Alignement icône + texte */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -178,13 +175,13 @@ body {
 }
 
 .feature-icon {
-  flex-shrink: 0;
   color: #4278D6;
+  flex-shrink: 0;
 }
 
 .feature-clean p {
-  color: #aaa;
-  font-size: 1.05rem;
+  color: #aaa;
+  font-size: 1.05rem;
 }
 
 /* =========================
