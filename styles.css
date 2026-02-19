@@ -249,7 +249,7 @@ footer {
 
 .exp-block:hover {
   transform: translateY(-4px);
-  border-color: #bbb; /* Gris au survol (même couleur pour tous) */
+  border-color: #bbb; /* Gris au survol */
 }
 
 .exp-block h3 {
@@ -273,14 +273,13 @@ footer {
 .exp-block.soft-skills-wide {
   grid-column: 1 / -1; /* Prend toute la largeur */
   margin-top: 1rem;
-  /* Pas de couleur spécifique ici, il hérite du style standard .exp-block */
 }
 
 /* Centrer le texte spécifique */
 .centered-text {
   text-align: center;
   font-size: 1.1rem;
-  color: #9ecfe8;
+  color: #ccc; /* COULEUR STANDARD GRISE */
   font-weight: 500;
   letter-spacing: 0.5px;
 }
