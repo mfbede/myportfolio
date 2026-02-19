@@ -144,44 +144,42 @@ body {
   border: 1px solid #111;
   border-radius: 6px;
 }
+
 /* =========================
-   FEATURES
-   ========================= */
+   FEATURES
+   ========================= */
 .features-clean {
-  display: flex;
-  justify-content: center;
-  gap: 4rem;
-  padding: 4rem 2rem;
-  background: #000;
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  padding: 4rem 2rem;
+  background: #000;
 }
 
 .feature-clean {
-  max-width: 260px;
-  text-align: center;
-  /* Correction ici : On s'assure que c'est bien visible par défaut */
-  opacity: 1; 
-  display: block;
+  max-width: 260px;
+  text-align: center;
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s ease forwards;
 }
+
+.feature-clean:nth-child(2) { animation-delay: 0.2s; }
+.feature-clean:nth-child(3) { animation-delay: 0.4s; }
 
 .feature-clean h3 {
-  color: #4278D6; 
-  margin-bottom: 0.5rem;
-  font-size: 1.5rem;
-  /* Alignement icône + texte */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-}
-
-.feature-icon {
-  color: #4278D6;
-  flex-shrink: 0;
+  color: #4278D6; /* Nouveau Bleu */
+  margin-bottom: 0.5rem;
+  font-size: 1.5rem;
 }
 
 .feature-clean p {
-  color: #aaa;
-  font-size: 1.05rem;
+  color: #aaa;
+  font-size: 1.05rem;
+}
+
+@keyframes fadeInUp {
+  to { opacity: 1; transform: translateY(0); }
 }
 
 /* =========================
@@ -208,7 +206,7 @@ footer {
 
 .content h2 {
   font-size: 2.2rem;
-  color: #4278D6;
+  color: #4278D6; /* Nouveau Bleu */
   margin-bottom: 1rem;
   text-align: center;
 }
@@ -219,36 +217,44 @@ footer {
   margin-bottom: 2.5rem;
   font-size: 1.1rem;
 }
+
+/* =========================
+   EXPERIENCE GRID
+   ========================= */
 .experience-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); 
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2rem;
 }
 
-.exp-block.full-width {
-  grid-column: 1 / -1;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 150px;
+.exp-block {
+  background: #0a0f14;
+  border: 1px solid #111;
+  padding: 1.5rem;
+  border-radius: 8px;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-.centered-text {
+.exp-block:hover {
+  transform: translateY(-4px);
+  border-color: #bbb; /* Gris au survol */
+}
+
+.exp-block h3 {
+  color: #4278D6; /* Nouveau Bleu */
+  margin-bottom: 0.8rem;
+  font-size: 1.3rem;
+}
+
+.exp-block ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.exp-block li {
+  margin-bottom: 0.5rem;
   color: #ccc;
-  font-size: 1.1rem;
-  max-width: 800px;
-  margin: 0 auto;
-  line-height: 1.8;
-}
-
-@media (max-width: 900px) {
-  .experience-grid {
-    grid-template-columns: 1fr;
-  }
-  .exp-block.full-width {
-    grid-column: auto;
-  }
+  line-height: 1.4;
 }
 
 /* =========================
