@@ -145,6 +145,18 @@ body {
   border-radius: 6px;
 }
 
+/* Intro paragraph style for map page */
+.map-intro {
+  background: #0a0f14;
+  border: 1px solid #111;
+  border-radius: 8px;
+  padding: 1.5rem;
+  color: #ccc;
+  line-height: 1.6;
+  font-size: 1.05rem;
+  text-align: justify;
+}
+
 /* =========================
    FEATURES
    ========================= */
@@ -218,17 +230,6 @@ footer {
   font-size: 1.1rem;
 }
 
-/* Intro paragraph style for map page */
-.map-intro {
-  background: #0a0f14;
-  border: 1px solid #111;
-  border-radius: 8px;
-  padding: 1.5rem;
-  color: #ccc;
-  line-height: 1.6;
-  font-size: 1.05rem;
-  text-align: justify;
-}
 /* =========================
    EXPERIENCE GRID
    ========================= */
@@ -246,31 +247,13 @@ footer {
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-.exp-block.full-width {
-  grid-column: 1 / -1; /* Prend toute la largeur disponible */
-}
-
-.exp-block.soft-skills-wide {
-  grid-column: 1 / -1; /* Rectangle aussi large que 3 blocs du haut */
-  background: linear-gradient(135deg, #0a0f14, #1a1f2a);
-  border: 2px solid #4278D6;
-  padding: 2rem;
-  margin-top: 1rem;
-}
-
-.exp-block.soft-skills-wide:hover {
-  transform: translateY(-6px);
-  border-color: #9ecfe8;
-  box-shadow: 0 10px 30px rgba(66, 120, 214, 0.3);
-}
-
 .exp-block:hover {
   transform: translateY(-4px);
-  border-color: #bbb;
+  border-color: #bbb; /* Gris au survol (même couleur pour tous) */
 }
 
 .exp-block h3 {
-  color: #4278D6;
+  color: #4278D6; /* Nouveau Bleu */
   margin-bottom: 0.8rem;
   font-size: 1.3rem;
 }
@@ -286,6 +269,14 @@ footer {
   line-height: 1.4;
 }
 
+/* Modification pour le carré Soft Skills */
+.exp-block.soft-skills-wide {
+  grid-column: 1 / -1; /* Prend toute la largeur */
+  margin-top: 1rem;
+  /* Pas de couleur spécifique ici, il hérite du style standard .exp-block */
+}
+
+/* Centrer le texte spécifique */
 .centered-text {
   text-align: center;
   font-size: 1.1rem;
@@ -293,7 +284,6 @@ footer {
   font-weight: 500;
   letter-spacing: 0.5px;
 }
-
 
 /* =========================
    EDUCATION GRID
