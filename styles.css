@@ -229,7 +229,6 @@ footer {
   font-size: 1.05rem;
   text-align: justify;
 }
-
 /* =========================
    EXPERIENCE GRID
    ========================= */
@@ -247,13 +246,31 @@ footer {
   transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
+.exp-block.full-width {
+  grid-column: 1 / -1; /* Prend toute la largeur disponible */
+}
+
+.exp-block.soft-skills-wide {
+  grid-column: 1 / -1; /* Rectangle aussi large que 3 blocs du haut */
+  background: linear-gradient(135deg, #0a0f14, #1a1f2a);
+  border: 2px solid #4278D6;
+  padding: 2rem;
+  margin-top: 1rem;
+}
+
+.exp-block.soft-skills-wide:hover {
+  transform: translateY(-6px);
+  border-color: #9ecfe8;
+  box-shadow: 0 10px 30px rgba(66, 120, 214, 0.3);
+}
+
 .exp-block:hover {
   transform: translateY(-4px);
-  border-color: #bbb; /* Gris au survol */
+  border-color: #bbb;
 }
 
 .exp-block h3 {
-  color: #4278D6; /* Nouveau Bleu */
+  color: #4278D6;
   margin-bottom: 0.8rem;
   font-size: 1.3rem;
 }
@@ -268,6 +285,15 @@ footer {
   color: #ccc;
   line-height: 1.4;
 }
+
+.centered-text {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #9ecfe8;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+}
+
 
 /* =========================
    EDUCATION GRID
