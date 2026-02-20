@@ -36,7 +36,7 @@ ul { list-style: none; }
 p { line-height: 1.6; }
 
 /* =========================================
-   NAVBAR (RESPONSIVE)
+   NAVBAR (RESPONSIVE SCROLLABLE)
    ========================================= */
 .navbar {
     position: fixed;
@@ -59,6 +59,8 @@ p { line-height: 1.6; }
     font-weight: 700;
     font-size: 1.5rem;
     letter-spacing: 1px;
+    margin-right: 2rem; /* Espace entre logo et menu */
+    flex-shrink: 0; /* Le logo ne rétrécit pas */
 }
 
 .nav-links {
@@ -73,6 +75,7 @@ p { line-height: 1.6; }
     font-weight: 400;
     color: var(--text-muted);
     position: relative;
+    white-space: nowrap; /* Empêche le texte de passer à la ligne */
 }
 
 .nav-links a:hover,
@@ -96,19 +99,35 @@ p { line-height: 1.6; }
     width: 100%;
 }
 
-/* Mobile Navbar adjustments */
+/* --- AJUSTEMENT MOBILE : MENU DÉFILANT --- */
 @media (max-width: 768px) {
     .navbar {
-        padding: 0 1.5rem;
+        padding: 0 1rem;
+        /* Sur mobile, on change la disposition pour permettre le scroll */
+        justify-content: flex-start; 
+        overflow-x: auto; /* Permet le scroll horizontal */
+        -webkit-overflow-scrolling: touch; /* Scroll fluide sur iOS */
+    }
+    
+    /* On cache la scrollbar moche mais on garde le scroll */
+    .navbar::-webkit-scrollbar {
+        display: none;
     }
     
     .nav-links {
-        display: none; /* Hidden on mobile for now (simple version) */
-        /* To make a full mobile menu, JS is needed to toggle a class */
+        display: flex; /* On l'affiche ! */
+        gap: 1.5rem;
+        margin-left: auto; /* Pousse les liens si besoin */
+        padding-right: 1rem; /* Petit espace à la fin du scroll */
+    }
+
+    .nav-links a {
+        font-size: 0.8rem; /* Un peu plus petit sur mobile */
     }
     
     .logo {
-        margin: 0 auto; /* Center logo on mobile */
+        margin-right: 1.5rem;
+        font-size: 1.2rem;
     }
 }
 
@@ -458,18 +477,17 @@ p { line-height: 1.6; }
    ========================================= */
 
 .wiki-code {
-    background-color: #1e1e1e;   /* Fond gris foncé type VS Code */
+    background-color: #1e1e1e;
     border: 1px solid #333;
     border-radius: 6px;
     margin: 1.5rem 0;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-    overflow: hidden; /* Pour que le header ne dépasse pas */
+    overflow: hidden; 
     position: relative;
 }
 
-/* Barre de titre façon "Terminal" ou "Fichier" */
 .wiki-code::before {
-    content: "TERMINAL / CODE"; /* Texte par défaut */
+    content: "TERMINAL / CODE";
     display: block;
     background: #2d2d2d;
     color: #aaa;
@@ -481,25 +499,22 @@ p { line-height: 1.6; }
     font-weight: bold;
 }
 
-/* Zone de code réelle */
 .wiki-code pre {
     margin: 0;
     padding: 1.5rem;
-    overflow-x: auto; /* Scroll horizontal si besoin */
-    scrollbar-width: thin; /* Scrollbar fine (Firefox) */
+    overflow-x: auto;
+    scrollbar-width: thin;
     scrollbar-color: #444 #1e1e1e;
 }
 
-/* Style du texte du code */
 .wiki-code code {
     font-family: 'Consolas', 'Monaco', 'Courier New', monospace;
     font-size: 0.9rem;
-    color: #d4d4d4; /* Gris clair lisible */
+    color: #9cdcfe;
     line-height: 1.6;
-    display: block; /* Prend toute la largeur */
+    display: block; 
 }
 
-/* Scrollbar Webkit (Chrome/Safari) */
 .wiki-code pre::-webkit-scrollbar {
     height: 8px;
 }
@@ -511,11 +526,5 @@ p { line-height: 1.6; }
     border-radius: 4px;
 }
 .wiki-code pre::-webkit-scrollbar-thumb:hover {
-    background: #ff5e00; /* Orange au survol */
+    background: #ff5e00;
 }
-
-/* Petite touche de couleur pour simuler la syntaxe (optionnel, sans JS) */
-.wiki-code code {
-    color: #9cdcfe; /* Bleu clair type variable par défaut */
-}
-
