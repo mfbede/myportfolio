@@ -452,3 +452,19 @@ p { line-height: 1.6; }
     height: 10px;
     background: var(--gradient-main);
 }
+
+/* Code Blocks for Projects Page */
+.wiki-code {
+    background: #050505;
+    border: 1px solid #333;
+    border-left: 3px solid #ff5e00; /* Orange accent */
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-family: monospace;
+    font-size: 0.9rem;
+    color: #ddd;
+}
+
+.wiki-code pre { margin: 0; }
