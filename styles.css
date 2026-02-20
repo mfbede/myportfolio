@@ -1,146 +1,345 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Compétences & Formation - Matéo Fernandez Bède</title>
+/* =========================================
+   VARIABLES & RESET
+   ========================================= */
+:root {
+    --bg-color: #0a0a0a;
+    --card-bg: #111111; 
+    --text-color: #ffffff;
+    --text-muted: #aaaaaa;
     
-    <!-- Lien vers le CSS global -->
-    <link rel="stylesheet" href="style.css">
+    --gradient-main: linear-gradient(135deg, #ff007f 0%, #ff5e00 100%);
     
-    <!-- Polices -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
-</head>
-<body class="page-skills">
+    --font-serif: 'Playfair Display', serif;
+    --font-sans: 'Lato', sans-serif;
+    
+    --nav-height: 80px;
+}
 
-    <!-- Navigation bar (Style unifié) -->
-    <header class="navbar">
-        <a href="index.html" class="logo">MFB.</a> <!-- Initiales stylées -->
-        <nav>
-            <ul class="nav-links">
-                <li><a href="index.html">Accueil</a></li>
-                <li><a href="map.html">Map</a></li>
-                <li><a href="skills.html" class="active">Compétences</a></li>
-                <li><a href="hobbies.html">Hobbies</a></li>
-                <li><a href="projects.html">Projets</a></li>
-                <li><a href="timeline.html">Timeline</a></li>
-            </ul>
-        </nav>
-    </header>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    <!-- Header de page (Titre principal) -->
-    <header class="page-header">
-        <h1 class="page-title">
-            <span class="gradient-text">Compétences</span> & <br>
-            <span class="gradient-text">Formation</span>
-        </h1>
-        <p class="page-subtitle">Expérience professionnelle chez <strong>Newrest HQ</strong>, formation académique et projets personnels.</p>
-        <div class="separator-line"></div>
-    </header>
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: var(--font-sans);
+    min-height: 100vh;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
 
-    <!-- Section Expérience -->
-    <section class="content-section">
-        <h2 class="section-title"> Expérience Professionnelle</h2>
-        <p class="section-subtitle">Tout l'expérience acquise au siège de <strong>Newrest</strong></p>
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+ul { list-style: none; }
 
-        <div class="grid-container">
-            <!-- Bloc -->
-            <div class="info-card">
-                <h3>Cloud & Identity</h3>
-                <ul>
-                    <li>AzureAD administration</li>
-                    <li>SSO applications Azure</li>
-                    <li>Intune administration</li>
-                </ul>
-            </div>
+/* =========================================
+   NAVBAR
+   ========================================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: var(--nav-height);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    background: rgba(10, 10, 10, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
 
-            <!-- Bloc -->
-            <div class="info-card">
-                <h3>Collaboration & Office</h3>
-                <ul>
-                    <li>Office 365: SharePoint, Exchange, Teams</li>
-                    <li>License management</li>
-                    <li>Training IT managers (EN/ES/FR)</li>
-                </ul>
-            </div>
+.logo {
+    font-family: var(--font-serif);
+    font-weight: 700;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+}
 
-            <!-- Bloc -->
-            <div class="info-card">
-                <h3>Infrastructure</h3>
-                <ul>
-                    <li>HyperV & VMware</li>
-                    <li>Linux projects (Hack the box, proxy, PFsense…)</li>
-                    <li>Antivirus deployment</li>
-                </ul>
-            </div>
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
 
-            <!-- Bloc -->
-            <div class="info-card">
-                <h3>Cybersecurity</h3>
-                <ul>
-                    <li>Phishing campaigns (Microsoft Defender)</li>
-                    <li>MOOC ANSSI</li>
-                    <li>Cisco CyberEssentials</li>
-                    <li>Cisco Ethical Hacker (in progress)</li>
-                </ul>
-            </div>
+.nav-links a {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: var(--text-muted);
+    position: relative;
+}
 
-            <!-- Bloc -->
-            <div class="info-card">
-                <h3>International Role</h3>
-                <ul>
-                    <li>Support local IT during acquisitions</li>
-                    <li>Travel with executives</li>
-                    <li>Multilingual collaboration (ES/EN)</li>
-                    <li>Online meetings across 53 countries</li>
-                </ul>
-            </div>
+.nav-links a:hover,
+.nav-links a.active {
+    color: #fff;
+}
 
-            <!-- Bloc -->
-            <div class="info-card">
-                <h3>Other Skills</h3>
-                <ul>
-                    <li>Payroll export (server → SFTP)</li>
-                    <li>Forensics</li>
-                    <li>Touch typing</li>
-                </ul>
-            </div>
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background: var(--gradient-main);
+    transition: width 0.3s ease;
+}
 
-            <!-- Bloc Large (Soft Skills) -->
-            <div class="info-card full-width">
-                <h3>Soft Skills</h3>
-                <p class="centered-text">
-                    Problem Solving — Effective Communication — Adaptability — Team cooperation — 
-                    Analytical Thinking — Multilingual Collaboration — Composed Under-Pressure
-                </p>
-            </div>
-        </div>
-    </section>
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
 
-    <!-- Section Education -->
-    <section class="content-section">
-        <h2 class="section-title">Education</h2>
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .logo { margin: 0 auto; }
+}
 
-        <div class="grid-container education-grid">
-            <div class="info-card">
-                <h3>IUT de Blagnac</h3>
-                <p>BUT Réseaux & Télécommunications<br>Parcours Cybersécurité</p>
-            </div>
 
-            <div class="info-card">
-                <h3>UQAC Chicoutimi, Québec</h3>
-                <p>Baccalauréat en Informatique</p>
-            </div>
-        </div>
-    </section>
+/* =========================================
+   HOME PAGE (HERO) - TYPOGRAPHIE
+   ========================================= */
+.hero-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    padding: 0 5%;
+    margin-top: var(--nav-height);
+}
 
-    <!-- Footer -->
-    <footer class="site-footer">
-        <p>© 2026 Matéo Fernandez Bède | Stay Secure</p>
-        <div class="bottom-gradient"></div>
-    </footer>
+@media (min-width: 900px) {
+    .hero-section {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 0 10%;
+    }
+}
 
-</body>
-</html>
+.typography-container {
+    font-family: var(--font-serif);
+    /* Augmenté légèrement line-height pour créer l'espace naturel (au lieu de 0.75) */
+    line-height: 0.9; 
+    z-index: 10;
+}
+
+.brand-name {
+    font-size: 11vw; 
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+@media (min-width: 1200px) { .brand-name { font-size: 150px; } }
+
+.brand-name span {
+    background: var(--gradient-main);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+/* --- GESTION DES 3 LIGNES (CORRIGÉ POUR ESPACEMENT) --- */
+
+.line-top { 
+    display: block; 
+    position: relative; 
+    white-space: nowrap; 
+}
+
+.line-bottom { 
+    display: block; 
+    position: relative; 
+    white-space: nowrap; 
+    
+    /* ESPACEMENT VERTICAL : On retire le margin négatif */
+    margin-top: 0.05em; /* Petit espace positif (~2mm visuellement selon la taille) */
+    
+    margin-left: 0.8em; 
+}
+
+.block-bede { 
+    display: block; 
+    position: relative; 
+    white-space: nowrap; 
+    
+    /* ESPACEMENT VERTICAL : Idem ici */
+    margin-top: 0.05em; 
+
+    margin-left: 2.3em; 
+}
+
+.big-letter { font-size: 1.4em; position: relative; z-index: 2; margin-right: -0.05em; line-height: 1; }
+.rest-word { font-size: 0.5em; letter-spacing: -0.02em; font-weight: 400; }
+
+/* Contenu Texte à droite */
+.content-container { margin-top: 50px; text-align: center; max-width: 400px; z-index: 5; }
+@media (min-width: 900px) { .content-container { text-align: left; margin-top: 100px; margin-left: 50px; } }
+
+.tagline { font-size: 1.5rem; font-weight: 300; line-height: 1.4; margin-bottom: 2rem; color: #e0e0e0; }
+
+.cta-button {
+    display: inline-block; padding: 15px 30px; background: var(--gradient-main); color: white;
+    font-weight: 700; font-size: 0.9rem; letter-spacing: 1px; text-transform: uppercase; border: none;
+}
+.cta-button:hover { transform: translateY(-2px); filter: brightness(1.1); }
+
+.scroll-indicator { position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%); }
+.arrow { display: block; width: 20px; height: 20px; border-bottom: 2px solid #ff5e00; border-right: 2px solid #ff5e00; transform: rotate(45deg); animation: bounce 2s infinite; }
+@keyframes bounce { 0%, 20%, 50%, 80%, 100% {transform: rotate(45deg) translate(0,0);} 40% {transform: rotate(45deg) translate(-10px, -10px);} 60% {transform: rotate(45deg) translate(-5px, -5px);} }
+
+
+/* =========================================
+   PAGES DE CONTENU (Skills, etc.)
+   ========================================= */
+.page-header {
+    margin-top: calc(var(--nav-height) + 4rem);
+    padding: 0 10%;
+    text-align: center;
+}
+
+.page-title {
+    font-family: var(--font-serif);
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+}
+
+.gradient-text {
+    background: var(--gradient-main);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.page-subtitle {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.separator-line {
+    width: 100px;
+    height: 4px;
+    background: var(--gradient-main);
+    margin: 3rem auto;
+}
+
+.content-section {
+    padding: 2rem 10%;
+    margin-bottom: 4rem;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+    font-family: var(--font-serif);
+    color: #fff;
+    border-left: 4px solid #ff007f;
+    padding-left: 1rem;
+}
+
+.section-subtitle {
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+    padding-left: 1.4rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.info-card {
+    background: var(--card-bg);
+    padding: 2rem;
+    border: 1px solid #222;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    border-color: #444;
+}
+
+.info-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 3px;
+    background: var(--gradient-main);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover::before {
+    transform: scaleX(1);
+}
+
+.info-card h3 {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #fff;
+}
+
+.info-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.info-card li {
+    margin-bottom: 0.5rem;
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    position: relative;
+    padding-left: 15px;
+}
+
+.info-card li::before {
+    content: '›';
+    position: absolute;
+    left: 0;
+    color: #ff5e00;
+    font-weight: bold;
+}
+
+.full-width {
+    grid-column: 1 / -1;
+}
+
+.centered-text {
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.site-footer {
+    margin-top: auto;
+    background: #050505;
+    text-align: center;
+    padding: 2rem 0 0 0;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.site-footer p { margin-bottom: 2rem; }
+
+.bottom-gradient {
+    width: 100%;
+    height: 10px;
+    background: var(--gradient-main);
+}
