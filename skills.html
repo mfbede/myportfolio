@@ -1,200 +1,146 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Skills & Education</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compétences & Formation - Matéo Fernandez Bède</title>
+    
+    <!-- Lien vers le CSS global -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Polices -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
+<body class="page-skills">
 
-<body>
+    <!-- Navigation bar (Style unifié) -->
+    <header class="navbar">
+        <a href="index.html" class="logo">MFB.</a> <!-- Initiales stylées -->
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="map.html">Map</a></li>
+                <li><a href="skills.html" class="active">Compétences</a></li>
+                <li><a href="hobbies.html">Hobbies</a></li>
+                <li><a href="projects.html">Projets</a></li>
+                <li><a href="timeline.html">Timeline</a></li>
+            </ul>
+        </nav>
+    </header>
 
-  <!-- Navigation bar -->
-  <header class="navbar">
-    <div class="logo">Myportfolio</div>
-    <nav>
-      <ul class="nav-icons">
+    <!-- Header de page (Titre principal) -->
+    <header class="page-header">
+        <h1 class="page-title">
+            <span class="gradient-text">Compétences</span> & <br>
+            <span class="gradient-text">Formation</span>
+        </h1>
+        <p class="page-subtitle">Expérience professionnelle chez <strong>Newrest HQ</strong>, formation académique et projets personnels.</p>
+        <div class="separator-line"></div>
+    </header>
 
-        <!-- HOME -->
-        <li>
-          <a href="index.html" class="nav-item">
-            <span class="icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M3 9l9-6 9 6v10a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V12H9v7a2 2 0 0 1-2 2H3z"/>
-              </svg>
-            </span>
-            <span class="text">Home</span>
-          </a>
-        </li>
+    <!-- Section Expérience -->
+    <section class="content-section">
+        <h2 class="section-title"> Expérience Professionnelle</h2>
+        <p class="section-subtitle">Tout l'expérience acquise au siège de <strong>Newrest</strong></p>
 
-        <!-- MAP -->
-        <li>
-          <a href="map.html" class="nav-item">
-            <span class="icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 18l-6 3V6l6-3 6 3 6-3v15l-6 3-6-3z"/>
-              </svg>
-            </span>
-            <span class="text">Map</span>
-          </a>
-        </li>
+        <div class="grid-container">
+            <!-- Bloc -->
+            <div class="info-card">
+                <h3>Cloud & Identity</h3>
+                <ul>
+                    <li>AzureAD administration</li>
+                    <li>SSO applications Azure</li>
+                    <li>Intune administration</li>
+                </ul>
+            </div>
 
-        <!-- SKILLS (active) -->
-        <li>
-          <a href="skills.html" class="nav-item" style="color:#00bfff;">
-            <span class="icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="3"/>
-                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c0 .69.28 1.32.73 1.77.45.45 1.08.73 1.77.73H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
-              </svg>
-            </span>
-            <span class="text">Skills</span>
-          </a>
-        </li>
+            <!-- Bloc -->
+            <div class="info-card">
+                <h3>Collaboration & Office</h3>
+                <ul>
+                    <li>Office 365: SharePoint, Exchange, Teams</li>
+                    <li>License management</li>
+                    <li>Training IT managers (EN/ES/FR)</li>
+                </ul>
+            </div>
 
-        <!-- HOBBIES -->
-        <li>
-          <a href="hobbies.html" class="nav-item">
-            <span class="icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 20l9-5-9-5-9 5 9 5z"/>
-                <path d="M12 12l9-5-9-5-9 5 9 5z"/>
-              </svg>
-            </span>
-            <span class="text">Hobbies</span>
-          </a>
-        </li>
+            <!-- Bloc -->
+            <div class="info-card">
+                <h3>Infrastructure</h3>
+                <ul>
+                    <li>HyperV & VMware</li>
+                    <li>Linux projects (Hack the box, proxy, PFsense…)</li>
+                    <li>Antivirus deployment</li>
+                </ul>
+            </div>
 
-        <!-- PROJECTS -->
-        <li>
-          <a href="projects.html" class="nav-item">
-            <span class="icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M3 3h18v4H3z"/>
-                <path d="M3 7h18v14H3z"/>
-              </svg>
-            </span>
-            <span class="text">Projects</span>
-          </a>
-        </li>
+            <!-- Bloc -->
+            <div class="info-card">
+                <h3>Cybersecurity</h3>
+                <ul>
+                    <li>Phishing campaigns (Microsoft Defender)</li>
+                    <li>MOOC ANSSI</li>
+                    <li>Cisco CyberEssentials</li>
+                    <li>Cisco Ethical Hacker (in progress)</li>
+                </ul>
+            </div>
 
-        <!-- TIMELINE -->
-        <li>
-          <a href="timeline.html" class="nav-item">
-            <span class="icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10"/>
-                <path d="M12 6v6l4 2"/>
-              </svg>
-            </span>
-            <span class="text">Timeline</span>
-          </a>
-        </li>
+            <!-- Bloc -->
+            <div class="info-card">
+                <h3>International Role</h3>
+                <ul>
+                    <li>Support local IT during acquisitions</li>
+                    <li>Travel with executives</li>
+                    <li>Multilingual collaboration (ES/EN)</li>
+                    <li>Online meetings across 53 countries</li>
+                </ul>
+            </div>
 
-      </ul>
-    </nav>
-  </header>
+            <!-- Bloc -->
+            <div class="info-card">
+                <h3>Other Skills</h3>
+                <ul>
+                    <li>Payroll export (server → SFTP)</li>
+                    <li>Forensics</li>
+                    <li>Touch typing</li>
+                </ul>
+            </div>
 
-  <!-- Hero section -->
-  <section class="hero cyber-hero">
-    <h1 class="cyber-title">My Skills & Education</h1>
-    <p class="cyber-subtitle">Professional experience at <strong>Newrest HQ</strong>, combined with academic training and personal projects.</p>
-    <div class="scanline"></div>
-  </section>
+            <!-- Bloc Large (Soft Skills) -->
+            <div class="info-card full-width">
+                <h3>Soft Skills</h3>
+                <p class="centered-text">
+                    Problem Solving — Effective Communication — Adaptability — Team cooperation — 
+                    Analytical Thinking — Multilingual Collaboration — Composed Under-Pressure
+                </p>
+            </div>
+        </div>
+    </section>
 
-  <!-- Experience section -->
-  <section class="content">
-    <h2>💼 Professional Experience</h2>
-    <p class="subtitle">All experience gained at <strong>Newrest HQ</strong></p>
+    <!-- Section Education -->
+    <section class="content-section">
+        <h2 class="section-title">Education</h2>
 
-    <div class="experience-grid">
-      <div class="exp-block">
-        <h3>Cloud & Identity</h3>
-        <ul>
-          <li>AzureAD administration</li>
-          <li>SSO applications Azure</li>
-          <li>Intune administration</li>
-        </ul>
-      </div>
+        <div class="grid-container education-grid">
+            <div class="info-card">
+                <h3>IUT de Blagnac</h3>
+                <p>BUT Réseaux & Télécommunications<br>Parcours Cybersécurité</p>
+            </div>
 
-      <div class="exp-block">
-        <h3>Collaboration & Office</h3>
-        <ul>
-          <li>Office 365: SharePoint, Exchange, Teams</li>
-          <li>License management</li>
-          <li>Training IT managers to the best practice, IT corporate environement (EN/ES/FR)</li>
-        </ul>
-      </div>
+            <div class="info-card">
+                <h3>UQAC Chicoutimi, Québec</h3>
+                <p>Baccalauréat en Informatique</p>
+            </div>
+        </div>
+    </section>
 
-      <div class="exp-block">
-        <h3>Infrastructure</h3>
-        <ul>
-          <li>HyperV & VMware</li>
-          <li>Linux projects and learning (Hack the box, proxy, load balancer, PFsense…)</li>
-          <li>Antivirus deployment</li>
-        </ul>
-      </div>
-
-      <div class="exp-block">
-        <h3>Cybersecurity</h3>
-        <ul>
-          <li>Using Microsoft defender to send Phishing campaigns or basic IT training to non IT users</li>
-          <li>MOOC ANSSI</li>
-          <li>Cisco CyberEssentials</li>
-          <li>Cisco Ethical Hacker (in progress)</li>
-        </ul>
-      </div>
-
-      <div class="exp-block">
-        <h3>International Role</h3>
-        <ul>
-          <li>Meeting with local IT to support them during acquisitions / transition</li>
-          <li>Travel with executives</li>
-          <li>Multilingual collaboration (Spanish and English)</li>
-          <li>Online meetings across the 53 countries of the company to keep contact with them, helping them, transmiting informations, taking their requests and keeping an eye on the health of their infrastructure</li>
-        </ul>
-      </div>
-
-      <div class="exp-block">
-        <h3>Other Skills</h3>
-        <ul>
-          <li>Payroll export (server → SFTP)</li>
-          <li>Forensics</li>
-          <li>Touch typing</li>
-        </ul>
-      </div>
-
-      <div class="exp-block full-width soft-skills-wide">
-        <h3>Soft Skills</h3>
-        <p class="centered-text">
-          Problem Solving — Effective Communication — Adaptability — Team cooperation — 
-          Analytical Thinking — Multilingual Collaboration — Composed Under-Pressure
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Education section -->
-  <section class="content">
-    <h2>🎓 Education</h2>
-
-    <div class="education-grid">
-      <div class="edu-block">
-        <h3>IUT de Blagnac</h3>
-        <p>BUT Réseaux & Télécommunications<br>Parcours Cybersécurité</p>
-      </div>
-
-      <div class="edu-block">
-        <h3>UQAC Chicoutimi, Québec</h3>
-        <p>Baccalauréat en Informatique</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer>
-    <p>© 2026 My personnal Portfolio | Stay Secure</p>
-  </footer>
+    <!-- Footer -->
+    <footer class="site-footer">
+        <p>© 2026 Matéo Fernandez Bède | Stay Secure</p>
+        <div class="bottom-gradient"></div>
+    </footer>
 
 </body>
 </html>
