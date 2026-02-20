@@ -1,360 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Projects</title>
+  <title>My Projects - Matéo Fernandez Bède</title>
+  
+  <!-- External CSS -->
   <link rel="stylesheet" href="styles.css">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body class="page-projects">
 
+  <!-- Navigation bar (Unified style) -->
   <header class="navbar">
-    <div class="logo">Myportfolio</div>
+    <a href="index.html" class="logo">MFB.</a>
     <nav>
-      <ul class="nav-icons">
-
-        <li>
-          <a href="index.html" class="nav-item">
-            <span class="icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M3 9l9-6 9 6v10a2 2 0 0 1-2 2h-4a2 2 0 0 1-2-2V12H9v7a2 2 0 0 1-2 2H3z" />
-              </svg>
-            </span>
-            <span class="text">Home</span>
-          </a>
-        </li>
-
-        <li>
-          <a href="map.html" class="nav-item">
-            <span class="icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M9 18l-6 3V6l6-3 6 3 6-3v15l-6 3-6-3z" />
-              </svg>
-            </span>
-            <span class="text">Map</span>
-          </a>
-        </li>
-
-        <li>
-          <a href="skills.html" class="nav-item">
-            <span class="icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="3" />
-                <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9c0 .69.28 1.32.73 1.77.45.45 1.08.73 1.77.73H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z" />
-              </svg>
-            </span>
-            <span class="text">Skills</span>
-          </a>
-        </li>
-
-        <li>
-          <a href="hobbies.html" class="nav-item">
-            <span class="icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M12 20l9-5-9-5-9 5 9 5z" />
-                <path d="M12 12l9-5-9-5-9 5 9 5z" />
-              </svg>
-            </span>
-            <span class="text">Hobbies</span>
-          </a>
-        </li>
-
-        <li>
-          <a href="projects.html" class="nav-item" style="color:#4278D6;">
-            <span class="icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M3 3h18v4H3z" />
-                <path d="M3 7h18v14H3z" />
-              </svg>
-            </span>
-            <span class="text">Projects</span>
-          </a>
-        </li>
-
-        <li>
-          <a href="timeline.html" class="nav-item">
-            <span class="icon">
-              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <circle cx="12" cy="12" r="10" />
-                <path d="M12 6v6l4 2" />
-              </svg>
-            </span>
-            <span class="text">Timeline</span>
-          </a>
-        </li>
-
+      <ul class="nav-links">
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="map.html">Map</a></li>
+        <li><a href="skills.html">Compétences</a></li>
+        <li><a href="hobbies.html">Hobbies</a></li>
+        <li><a href="projects.html" class="active">Projets</a></li>
+        <li><a href="timeline.html">Timeline</a></li>
       </ul>
     </nav>
   </header>
 
-  <section class="hero cyber-hero">
-    <h1 class="cyber-title">My Projects</h1>
-    <p class="cyber-subtitle">Here you will find my projects and learning projects</p>
-    <div class="scanline"></div>
+  <!-- Page Header (Gradient Title) -->
+  <header class="page-header">
+    <h1 class="page-title">
+        <span class="gradient-text">My</span> <br>
+        <span class="gradient-text">Projects</span>
+    </h1>
+    <p class="page-subtitle">Here you will find my projects and learning paths.</p>
+    <div class="separator-line"></div>
+  </header>
+
+  <!-- Summary Section -->
+  <section class="content-section">
+    <div class="info-card full-width">
+      <h3>Summary</h3>
+      <ul class="project-summary">
+        <li>
+          <a href="#learning"><strong>Learning Projects</strong></a>
+          <ul>
+            <li><a href="#learning-intro">Introduction</a></li>
+            <li><a href="#learning-cdsa">CDSA (SOC Analyst)</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="#personal"><strong>University Projects</strong></a>
+          <ul>  
+            <li><a href="#crypto-reports">Cryptojacking reports</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
   </section>
 
-  <section class="content">
-    <h2>Summary</h2>
-    <ul class="project-summary">
-      <li>
-        <a href="#learning">Learning Projects</a>
-        <ul>
-          <li><a href="#learning-intro">Introduction</a></li>
-          <li><a href="#learning-cdsa">CDSA</a></li>
-        </ul>
-      </li>
-      <li>
-        <a href="#personal">University Projects</a>
-        <ul>  
-          <li><a href="#crypto-reports">Cryptojacking reports</a></li>
-        </ul>
-        </ul>
-      </li>
-    </ul>
-  </section>
-
-  <section id="learning" class="project-section">
-    <h2>Learning projects</h2>
-    <!!------------------------------------------------------------------------------------------------------ Subtitle 1 ------------------------------------------------------------------------------------------------------>
-    <div id="learning-intro" class="sub-project">
+  <!-- Learning Projects Section -->
+  <section id="learning" class="content-section">
+    <h2 class="section-title">Learning Projects</h2>
+    
+    <!-- Introduction -->
+    <div id="learning-intro" class="info-card full-width" style="margin-bottom: 2rem;">
       <h3>Introduction</h3>
-      <p>During the first year of my career I have learned a lot of things form my Internet and above all thanks to my coleegs and managers. But I felt that I've had to learn by my self. So I already knew root me because I've done some challenges when I was at the university and then I have seen HTB. One collegue talked to me about this and in the end I've jumped into it. It is a very well done course with practical labs on Linux Parrot VM. Also there are some quiz to see if you understand the course. Also I am taking notes as it is very helpfull to remind me what I have learned during the course. I will detail what lessons and what competences I will learn during those course.</p>
+      <p>During the first year of my career I have learned a lot of things from the Internet and above all thanks to my colleagues and managers. But I felt that I had to learn by myself. I already knew Root-Me from university, and then I discovered HTB. A colleague recommended it, and I jumped into it. It is a very well-done course with practical labs on Linux Parrot VM. I take notes diligently to remember what I learn.</p>
     </div>
 
-    <div id="learning-cdsa" class="sub-project">
-      <h3>SOC Analyst job path</h3>
-      <p>I am currently following the SOC Analyst job path to upgrade my knowledge in cybersecurity. This mainly focuses on the defense aspect. There are a lot of courses that I will show you :
-        <br><br>
-      <h4 class="htb-title">Incident Handling Process</h4>
+    <!-- CDSA / SOC Analyst -->
+    <div id="learning-cdsa" class="info-card full-width">
+      <h3>SOC Analyst Job Path</h3>
+      <p>I am currently following the SOC Analyst job path to upgrade my knowledge in cybersecurity, focusing mainly on defense. Here are the modules:</p>
+      
       <br>
-      <p>This module provides a comprehensive overview of the procedural aspect of incident handling, strictly aligned with the NIST SP 800-61 r2 standards.
-It explores each critical stage of the response lifecycle, from initial preparation and detection to containment, recovery, and post-incident analysis.
-The curriculum focuses on the strategic perspective of a handler, integrating the Cyber Kill Chain to manage security incidents systematically.
-By examining real-world breach scenarios, the module bridges the gap between theoretical frameworks and the practical execution of defense strategies.
-It serves as a fundamental pillar for SOC operations, ensuring all response actions are documented, effective, and compliant with industry benchmarks.
-MITRE ATACK TO ADD :
-      </p>
-      <br><br>
-      <p>Exemple of what I have done in this first module. (modified files or stories exemples due to copyright)</p>
-      <br><br>
-      <p>
-        -<b> Question 1 :</b> On the Wazuh log file identify all events that indicate potential credential compromise. Check the event ID 4668 and verify full path of the parent process name that executed a credential dumping tool.
-      </p>
-      <br><br>
-      <p>
-        <u>First step :</u> Get the file and unzip it
-      </p>
+      <h4 style="color: #ff5e00; margin-bottom: 0.5rem;">Incident Handling Process</h4>
+      <p>This module provides a comprehensive overview of incident handling aligned with NIST SP 800-61 r2 standards. It covers preparation, detection, containment, and recovery.</p>
+      
+      <br>
+      <p><strong>Example of practical work (modified for copyright):</strong></p>
+      <br>
+      
+      <p><strong>- Question 1:</strong> On the Wazuh log file identify all events that indicate potential credential compromise. Check event ID 4668.</p>
+      <p><u>First step:</u> Get the file and unzip it.</p>
 
       <div class="wiki-code">
-        <pre><code>Wget https://pathof.thefile.com/wazuh_export.zip
+<pre><code>wget [https://pathof.thefile.com/wazuh_export.zip](https://pathof.thefile.com/wazuh_export.zip)
 unzip wazuh_export.zip</code></pre>
       </div>
 
-      <p><u>Second step :</u> use a command to find into the file what is the parent process name that executed a credential dumping tool.
-        Note that before doing this I have checked the file to see if how he was built in order to find what I want thanks to grep tool.
-      </p>
+      <p><u>Second step:</u> Use grep to find the parent process name.</p>
 
       <div class="wiki-code">
-        <pre><code>grep -B5 "mimikatz" wazuh_export.json
-"newProcessName": "C:\\Users\\Administrator\\Downlads\\mimikatz.exe",
-"parentProcessName": "C:\\Program Files\\Mozilla Firefox\\firefox.exe",</code></pre>
+<pre><code>grep -B5 "mimikatz" wazuh_export.json
+"newProcessName": "C:\\\\Users\\\\Administrator\\\\Downlads\\\\mimikatz.exe",
+"parentProcessName": "C:\\\\Program Files\\\\Mozilla Firefox\\\\firefox.exe",</code></pre>
       </div>
 
-      <p>The answer for the first question is : "newProcessName": "C:\\Users\\Administrator\\Downlads\\mimikatz.exe" </p>
+      <p>Answer: <code>"newProcessName": "C:\\\\Users\\\\Administrator\\\\Downlads\\\\mimikatz.exe"</code></p>
       <br>
 
-      <p>
-        -<b> Question 2 :</b> Identify events that show persistence mechanism. type the value of imagePath for a persistence mechanism that took place on the host DB01.
-      </p>
-      <br><br>
-      <p>
-        <u>First step :</u> search using jq to filter the JSON file. Note that looking at the file I have seen the some infos that I needed to do the query like the filters that begin by "._source.".
-      </p>
+      <p><strong>- Question 2:</strong> Identify events that show persistence mechanism. Find the imagePath for persistence on host DB01.</p>
+      <p><u>First step:</u> Search using jq to filter the JSON file.</p>
 
       <div class="wiki-code">
-        <pre><code>jq '.[] | select(.source.agent.name == "DB01" | select(._source.rule.groups[] == "persistence")' wazuh_export.json</code></pre>
+<pre><code>jq '.[] | select(.source.agent.name == "DB01" | select(._source.rule.groups[] == "persistence")' wazuh_export.json</code></pre>
       </div>
 
       <div class="wiki-code">
-        <pre><code>"_index": "wazuh-alerts-4.x-2025.10.09",
-"_id": "609e3edb-7c01-4cf2-9b48-3e10d58afdd6",
-"_source": {
-  "agent": {
-    "ip": "172.16.30.17",
-    "name": "DB01",
-    "id": "010"
-  },
-  "manager": {
-    "name": "ubuntu"
-  },
-  "location": "EventChannel",
-  "decoder": {
-    "name": "windows_eventchannel"
-  },
-  "timestamp": "2025-10-09T04:28:42.102140Z",
+<pre><code>"_source": {
   "rule": {
-    "firedtimes": 1,
-    "mail": false,
-    "level": 8,
     "description": "New Windows service installed",
-    "groups": [
-      "service",
-      "persistence"
-    ],
-    "id": "90008"
+    "groups": ["service", "persistence"]
   },
   "data": {
     "win": {
-      "system": {
-        "eventID": "7045",
-        "systemTime": "2025-10-09T08:10:11.102140Z",
-        "providerName": "Service Control Manager"
-      },
       "eventdata": {
         "serviceName": "PSEXESVC",
-        "imagePath": "C:\\Windows\\PSEXESVC.exe",                                 
-        "user": "SYSTEM",
-        "message": "A service was installed to start from Windows root path"
+        "imagePath": "C:\\\\Windows\\\\PSEXESVC.exe"
       }
     }
   }
 }</code></pre>
       </div>
 
-      <p>The answer for the second question is : "imagePath": "C:\\Windows\\PSEXESVC.exe" </p>
-      <br><br>
+      <p>Answer: <code>"imagePath": "C:\\\\Windows\\\\PSEXESVC.exe"</code></p>
+      <br>
 
-      <p>
-        -<b> Question 3 :</b> Identify exfiltration activity — file(s) uploaded or outbound traffic. What is the external IP address to which the file diagnostics_data.zip was uploaded ?
-      </p>
-      <br><br>
-      <p>
-        <u>First step :</u> search using grep to find what I need in the JSON file.
-      </p>
+      <p><strong>- Question 3:</strong> Identify exfiltration activity. What is the external IP address to which diagnostics_data.zip was uploaded?</p>
 
       <div class="wiki-code">
-        <pre><code>grep -B5 "diagnostics_data.zip" wazuh_export.json</code></pre>
+<pre><code>grep -B5 "diagnostics_data.zip" wazuh_export.json</code></pre>
       </div>
 
-      <div class="wiki-code">
-        <pre><code>"timestamp": "2025-10-09T05:33:58.102140Z",
-      "rule": {
-        "firedtimes": 3,
-        "mail": false,
-        "level": 9,
-        "description": "Large outbound HTTPS POST with filename diagnostics_data.zip",
---
-            "image": "C:\\Users\\svc_deployer\\AppData\\Roaming\\updater.exe",
-            "destinationIp": "93.184.216.34",                                        
-            "destinationPort": "443",
-            "protocol": "tcp",
-            "user": "insight\\svc_deployer",
-            "details": "HTTP POST /upload diagnostics_data.zip"
-        </code></pre>
-      </div>
-
-      <p>The answer for the thrid question is : "destinationIp": "93.184.216.34". I know this because a little bit after there is a line with a POST request to upload the zip file in question </p>
-      <br><br>
-
-      <p>
-        -<b> Question 4 :</b> I4."Which user tried to connect to the file share \\fs01\projects" ?
-      </p>
-      <br><br>
-      <p>
-        <u>First step :</u> search using grep to find what I need in the JSON file.
-      </p>
-
-      <div class="wiki-code">
-        <pre><code>grep -B2 -i "projects" wazuh_export.json</code></pre>
-      </div>
-
-      <div class="wiki-code">
-        <pre><code>"destinationPort": "445",
-            "user": "svc_admin",                                                    [---[Solution]---]
-            "details": "SMB connect to \\\\fs01\\projects"
-        </code></pre>
-      </div>
-
-      <p>The answer for the last question is : svc_admin". I know this because in the bottom line there is "details": "SMB connect to \\\\fs01\\projects" that tells me that it was a connection to this shared disk. </p>
-      <br><br>
-
-      <h4 class="htb-title">Security Monitoring & SIEM Fundamentals</h4>
+      <p>Answer: <code>"destinationIp": "93.184.216.34"</code></p>
       <br>
-  This module demystifies the core operations of a Security Operation Center (SOC) by exploring the synergy between SIEM solutions and the Elastic Stack.
-  It focuses on the practical application of the MITRE ATT&CK framework to develop custom KQL (Kibana Query Language) queries and detection use cases.
-  Hands-on labs allow for the creation of advanced visualizations and dashboards to monitor real-time security events and potential breaches.
-  Through the simulation of common attack principles, students learn to transform raw log data into actionable intelligence and defensive visualizations.
-  The module concludes with a rigorous skills assessment, validating the ability to navigate, query, and secure environments using modern SIEM technologies.      <br><br>
-      <br><br>
-      <h4 class="htb-title">Windows Event Logs & Finding Evil</h4>
-      <br>
-      This part includes a lot of sub categories to learn the basics and more advanced techniques
-      <br><br>
-      <h4 class="htb-title">Introduction to Threat Hunting & Hunting With Elastic</h4>
-      <br>
-      This part includes a lot of sub categories to learn the basics and more advanced techniques
-      <br><br>
-      <h4 class="htb-title">Understanding Log Sources & Investigating with Splunk</h4>
-      <br>
-      This part includes a lot of sub categories to learn the basics and more advanced techniques
-      <br><br>
-      <h4 class="htb-title">Windows Attacks & Defense</h4>
-      <br>
-      This part includes a lot of sub categories to learn the basics and more advanced techniques
-      <br>
-      </p>
+
+      <h4 style="color: #ff5e00; margin: 1.5rem 0 0.5rem;">Other Modules</h4>
+      <ul>
+        <li>Security Monitoring & SIEM Fundamentals</li>
+        <li>Windows Event Logs & Finding Evil</li>
+        <li>Introduction to Threat Hunting with Elastic</li>
+        <li>Understanding Log Sources & Investigating with Splunk</li>
+      </ul>
     </div>
   </section>
 
-  <section id="personal" class="project-section">
-    <h2>School projects</h2>
-    <p class="subtitle">Those are one of the projects I have runned during my scolarship.</p>
+  <!-- University Projects Section -->
+  <section id="personal" class="content-section">
+    <h2 class="section-title">School Projects</h2>
+    <p class="section-subtitle">Projects conducted during my scholarship at UQAC.</p>
 
-    <div id="crypto-reports" class="sub-project">
-      <h3>My research school project</h3>
-      <p>This project is called Cryptojacking. During my scholarship at UQAC in Quebec, Canada I have had this little project. He was at the end before getting my diploma. It has been a good opportunity to have a project driven by a Phd student tutor. In the end of this project he graded my report. But before that he guided me throught the project, telling me what was the best thing to do and where I've had to look to dig out the ideas. He gave his point of view from a Phd student. Of course I have done all the work alone but he had an eye on what I was doing and this helped me a lot at the time of doing the experiences on my computer. Let's see the first of three reports that were asked to me.</p>
+    <div id="crypto-reports" class="info-card full-width">
+      <h3>Cryptojacking Research Project</h3>
+      <p>This project was conducted at the end of my degree at UQAC (Quebec). Guided by a PhD student, I researched Cryptojacking detection.</p>
+      
       <br>
-      <h3>The first report</h3>
+      <h4>Report 1: Detection & KPIs</h4>
+      <p>What is Cryptojacking and what indicators (KPIs) should we monitor to detect it?</p>
       <br>
-      <p>This first reports talk about what is Cryptojacking (Technique used by attackers to earn money mining cryptocurrencies using infected computers) and what indicators should we pay attention when we are suffering a Cryptojacking attack. And I will answering this question : What are the KPI's ( Key Performance Indicator ) that we have to monitor to detect and counter the Cryptojacking type attack ?</p>
+      <!-- PDF Embed (Ensure the file path is correct in your repo) -->
+      <iframe src="Reports/Cryptojacking.pdf" width="100%" height="600px" style="border: 1px solid #333; background: #fff;"></iframe>
+      
+      <br><br>
+      <h4>Report 2: Mining Pools vs Solo Mining</h4>
+      <p>Explaining cryptocurrency mining principles.</p>
       <br>
-      <p>
-        <iframe src="Reports/Cryptojacking.pdf" width="100%" height="800px"></iframe>
-      </p>
-      <br>
-      <h3>Second report</h3>
-      <br>
-      <p>The second report reports talk about what is the cryptomoney and how it works. Also I explain de principles of what are the Pool and Solo minning in the crypto world.</p>
-      <br>
-      <p>
-        <iframe src="Reports/pool_mining_vs_solo_mining.pdf" width="100%" height="800px"></iframe>
-      </p>
-      <br>
-      <h3>Conclusion</h3>
-      <br>
-      <p>Discovery of the research world, etc...</p>
-      <br>
-    </div>
-
-    <div id="personal-cloudflare" class="sub-project">
-      <h3>Cloudflare</h3>
-      <p>Cloudflare project description here.</p>
-      <div class="wiki-code">
-        <pre><code>// Exemple de configuration Cloudflare
-{
-  "zone": "example.com",
-  "security_level": "high"
-}</code></pre>
-      </div>
+      <iframe src="Reports/pool_mining_vs_solo_mining.pdf" width="100%" height="600px" style="border: 1px solid #333; background: #fff;"></iframe>
+      
+      <br><br>
+      <h4>Conclusion</h4>
+      <p>A great discovery of the academic research world.</p>
     </div>
   </section>
 
-  <footer>
-    <p>© 2026 My personnal Portfolio | Stay Secure</p>
+  <!-- Footer -->
+  <footer class="site-footer">
+    <p>© 2026 Matéo Fernandez Bède | Stay Secure</p>
+    <div class="bottom-gradient"></div>
   </footer>
 
 </body>
-
 </html>
